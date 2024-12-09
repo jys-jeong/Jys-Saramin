@@ -1,0 +1,10 @@
+{
+  "development": {
+    "username": "jys",
+    "password": "jysjys0725",
+    "database": "recruit_job",
+    "host": "127.0.0.1",
+    "dialect": "mysql",
+    "port":3000
+  }
+}
