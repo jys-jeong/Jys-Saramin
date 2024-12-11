@@ -1,10 +1,19 @@
-const { sequelize } = require('./models'); // models/index.js 불러오기
+const express = require('express');
+const bodyParser = require('body-parser');
+const swaggerUi = require('swagger-ui-express');
+const swaggerDocs = require('./swagger/swagger');
+const authRoutes = require('./routes/authRoutes');
+const sequelize = require('./config/config.js');
+const { globalErrorHandler } = require('./middlewares/errorHandler');
+const app = express();
+app.use(bodyParser.json());
 
-(async () => {
-  try {
-    await sequelize.sync({ force: true }); // 기존 테이블 삭제 후 재생성
-    console.log('All tables created successfully!');
-  } catch (error) {
-    console.error('Error creating tables:', error);
-  }
-})();
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocs));
+app.use('/auth', authRoutes);
+
+app.use(globalErrorHandler);
+sequelize.sync({ force: false }).then(() => {
+  app.listen(17443, () => {
+    console.log('Server running on http://localhost:17443');
+  });
+});

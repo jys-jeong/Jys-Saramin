@@ -8,5 +8,14 @@ module.exports = (sequelize, DataTypes) => {
     resume: { type: DataTypes.BLOB, allowNull: false },
   });
 
+  // 외래키 관계 설정
+  Application.associate = (models) => {
+    // userId가 User 모델을 참조하는 외래키 관계 설정
+    Application.belongsTo(models.User, { foreignKey: 'userId', onDelete: 'CASCADE' });
+    
+    // jobId가 JobPosting 모델을 참조하는 외래키 관계 설정
+    Application.belongsTo(models.JobPosting, { foreignKey: 'jobId', onDelete: 'CASCADE' });
+  };
+
   return Application;
 };
