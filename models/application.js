@@ -5,7 +5,6 @@ module.exports = (sequelize, DataTypes) => {
     jobId: { type: DataTypes.INTEGER, allowNull: false },
     status: { type: DataTypes.STRING, allowNull: false },
     date: { type: DataTypes.DATE, allowNull: false },
-
   });
 
   // 외래키 관계 설정

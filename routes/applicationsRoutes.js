@@ -1,15 +1,15 @@
 const express = require('express');
 const router = express.Router();
 const { createApplication, getApplications, cancelApplication } = require('../controllers/applicationsController');
-const authMiddleware = require('../middlewares/authMiddleware');  // 인증 미들웨어
+const { authenticate } = require('../middlewares/authMiddleware');
 
 // 지원하기
-router.post('/', authMiddleware, createApplication);
+router.post('/', authenticate, createApplication);
 
 // 지원 내역 조회
-router.get('/', authMiddleware, getApplications);
+router.get('/', authenticate, getApplications);
 
 // 지원 취소
-router.delete('/:id', authMiddleware, cancelApplication);
+router.delete('/:id', authenticate, cancelApplication);
 
 module.exports = router;

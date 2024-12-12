@@ -5,6 +5,8 @@ const swaggerDocs = require('./swagger/swagger');
 const authRoutes = require('./routes/authRoutes');
 const jobRoutes = require('./routes/jobRoutes');
 const applicationsRoutes = require('./routes/applicationsRoutes');
+const bookmarkRoutes =require('./routes/bookmarkRoutes');
+const companyReviewRoutes =require('./routes/companyReviewRoutes');
 const sequelize = require('./config/config.js');
 const { globalErrorHandler } = require('./middlewares/errorHandler');
 const app = express();
@@ -14,6 +16,8 @@ app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocs));
 app.use('/auth', authRoutes);
 app.use('/jobs', jobRoutes);
 app.use('/applications',applicationsRoutes);
+app.use('/bookmarks',bookmarkRoutes);
+app.use('/companyreview', companyReviewRoutes);
 app.use(globalErrorHandler);
 sequelize.sync({ force: false }).then(() => {
   app.listen(17443, () => {

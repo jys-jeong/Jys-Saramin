@@ -8,14 +8,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       allowNull: false,
     },
-    tagId: {
-      type: DataTypes.INTEGER,
-      references: {
-        model: 'ReviewTags',
-        key: 'id',
-      },
-      allowNull: true,
-    },
+
     review: {
       type: DataTypes.STRING(255),
       allowNull: false,
@@ -23,7 +16,6 @@ module.exports = (sequelize, DataTypes) => {
   });
   CompanyReview.associate = (models) => {
     CompanyReview.belongsTo(models.Company, { foreignKey: 'companyId' });
-    CompanyReview.belongsTo(models.ReviewTag, { foreignKey: 'tagId' });
   };
   return CompanyReview;
 };

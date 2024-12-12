@@ -4,7 +4,7 @@ const jwt = require('jsonwebtoken');  // JWT 인증
 // 지원하기
 exports.createApplication = async (req, res) => {
   try {
-    const { jobId, resume } = req.body;
+    const { jobId, status} = req.body;
     const {id:userId} = req.user;  // JWT에서 사용자 ID를 추출
 
     // 중복 지원 체크
@@ -20,9 +20,8 @@ exports.createApplication = async (req, res) => {
     const newApplication = await Application.create({
       userId,
       jobId,
-      status: 'applied',  // 기본 상태는 'applied'
+      status: status,  // 기본 상태는 'applied'
       date: new Date(),
-      resume,  // 이력서 첨부
     });
 
     return res.status(201).json(newApplication);
@@ -36,16 +35,11 @@ exports.createApplication = async (req, res) => {
 exports.getApplications = async (req, res) => {
   try {
     const userId = req.user.id;
-    const { status, startDate, endDate } = req.query;
+    const { status } = req.query;
 
     const whereConditions = { userId };
 
     if (status) whereConditions.status = status;
-    if (startDate && endDate) {
-      whereConditions.date = {
-        [Op.between]: [startDate, endDate],
-      };
-    }
 
     // 지원 내역 조회
     const applications = await Application.findAll({
