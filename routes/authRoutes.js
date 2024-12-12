@@ -8,5 +8,7 @@ router.post('/register', registerValidation, validate, authController.register);
 router.post('/login', authController.login);
 router.post('/refresh', authController.refreshToken);
 router.put('/profile', authenticate, authController.updateProfile);
+router.get('/user/profile',authenticate, authController.getProfile);
+router.delete('/user/delete', authenticate, authController.deleteAccount);
 
 module.exports = router;
