@@ -23,15 +23,16 @@ exports.login = async (req, res, next) => {
   try {
     const { email, password } = req.body;
     const user = await User.findOne({ where: { email } });
-
+    console.log(user);
+    console.log(email,password);
     if (!user) {
-      return next(createError(401, '인증 실패, 권한 없음'));
+      return next(createError(401, '인증 실패, 권한 없음: 회원가입 해주세요'));
     }
 
     // 2. 비밀번호 검증
     const encryptedPassword = Buffer.from(password).toString('base64');
     if (user.password !== encryptedPassword) {
-      return next(createError(401, '인증 실패, 권한 없음'));
+      return next(createError(401, '인증 실패, 권한 없음: 입력하신 비밀번호가 틀렸습니다.'));
     }
 
     // Access Token 발급
@@ -118,14 +119,19 @@ exports.updateProfile = async (req, res,next) => {
       { email, password: hashedPassword, name },
       { where: { id: userId } }
     );
-
+    
     if (updatedUser[0] === 0) {
       return res.status(400).json({ message: '잘못된 입력, 파라미터 오류' });
     }
-
-    res.status(200).json({ message: '프로필 업데이트 성공' });
+    const newAccessToken = jwt.sign(
+      { id: req.user.id, email: req.user.email, role: req.user.role },
+      process.env.JWT_SECRET || 'default_secret',
+      { expiresIn: '1h' }
+    );
+    res.status(200).json({ message: '프로필 업데이트 성공', accessToken:newAccessToken });
   } catch (error) {
-      next(createError(500, '서버 오류 발생'));
+    console.error(error);
+      next(createError(500, '서버 오류 발생:',error));
   }
 };
 exports.getProfile = async (req, res,next) => {
@@ -151,11 +157,6 @@ exports.deleteAccount = async (req, res, next) => {
   try {
     const userId = req.user.id; // 인증된 사용자 ID
     const targetUserId = req.params.id; // URL 파라미터에서 대상 사용자 ID
-
-    // 관리자만 삭제할 수 있는 부분을 추가
-    if (req.user.role !== 'admin' && userId !== targetUserId) {
-      return next(createError(403, '본인 또는 관리자만 삭제할 수 있습니다.'));
-    }
 
     // 사용자가 존재하는지 확인
     const user = await User.findOne({ where: { id: targetUserId } });

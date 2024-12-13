@@ -1,10 +1,11 @@
 const { JobPosting, Skill, Company, Keyword } = require('../models');
 const { Op } = require('sequelize');
+const { createError } = require('../middlewares/errorHandler');
 
 // 공고 목록 조회 (GET /jobs)
-exports.getJobPostings = async (req, res) => {
+exports.getJobPostings = async (req, res, next) => {
   try {
-    const { page = 1, limit = 20, sortBy = 'views', keyword, company, position, location, experience, wage, skill } = req.query;
+    const { page = 1, limit = 20, sortby = 'views', keyword, company, position, location, experience, wage, skill } = req.query;
     const offset = (page - 1) * limit;
     const parsedLimit = parseInt(limit, 10);
     const where = {};
@@ -55,12 +56,23 @@ exports.getJobPostings = async (req, res) => {
     const order = [];
 
     // 정렬 조건
-    if (sortBy === 'wage') {
+    if (sortby === 'wage') {
       order.push([{ model: Company }, 'wage', 'DESC']);
     } else {
-      order.push([sortBy, 'DESC']);
+      order.push([sortby, 'DESC']);
     }
 
+
+    const filteredJobPostings = await JobPosting.findAll({
+      where,
+      include,
+      attributes: ['id'],
+    });
+
+
+    if(filteredJobPostings.count==0){
+      return next(createError(400, '해당하는 데이터가 존재하지 않습니다.'));
+    }
     // 데이터 조회
     const jobPostings = await JobPosting.findAndCountAll({
       where,
@@ -68,8 +80,12 @@ exports.getJobPostings = async (req, res) => {
       offset,
       limit: parsedLimit,
       order,
-      attributes: ['id', 'companyId', 'title', 'link', 'experience', 'education', 'employmentType', 'salary', 'location', 'deadline'],
+      attributes: ['id', 'companyId', 'title', 'link', 'experience', 'education', 'employmentType', 'salary', 'location', 'deadline','views'],
     });
+
+    if(jobPostings.count==0){
+      return res.status(200).json({'message':'해당하는 데이터가 존재하지 않습니다.'});
+    }
 
     // 필드 변환
     const transformedJobPostings = jobPostings.rows.map(posting => ({
@@ -88,7 +104,7 @@ exports.getJobPostings = async (req, res) => {
     }));
 
     res.status(200).json({
-      filters: { page, limit, sortBy, keyword, company, position, location, experience, wage, skill },
+      filters: { page, limit, sortby, keyword, company, position, location, experience, wage, skill },
       totalCount: jobPostings.count,
       totalPages: Math.ceil(jobPostings.count / limit),
       currentPage: page,
@@ -96,15 +112,12 @@ exports.getJobPostings = async (req, res) => {
     });
   } catch (error) {
     console.error('Error retrieving job postings:', error);
-    res.status(500).json({ message: 'Error retrieving job postings', error });
+    next(createError(500, '서버 오류'));
   }
 };
 
-
-
-
 // 공고 상세 조회 (GET /jobs/:id)
-exports.getJobPostingById = async (req, res) => {
+exports.getJobPostingById = async (req, res, next) => {
   try {
     const { id } = req.params; // 채용 공고 ID
     const job = await JobPosting.findByPk(id, {
@@ -121,12 +134,7 @@ exports.getJobPostingById = async (req, res) => {
       ]
     });
 
-    if (!job) return res.status(404).json({ message: 'Job not found' });
-
-    // companyId 확인
-    if (!job.companyId) {
-      return res.status(400).json({ message: 'Job does not have a valid companyId' });
-    }
+    if (!job) return next(createError(404, '공고를 찾을 수 없습니다.'));
 
     job.views += 1; // 조회수 증가
     await job.save();
@@ -141,15 +149,12 @@ exports.getJobPostingById = async (req, res) => {
     res.status(200).json({ job, relatedJobs });
   } catch (error) {
     console.error('Error:', error);  // 오류 출력
-    res.status(500).json({ message: 'Error retrieving job posting details', error });
+    next(createError(500, '서버 오류'));
   }
 };
 
-
-
-
 // 공고 등록 (POST /jobs)
-exports.createJobPosting = async (req, res) => {
+exports.createJobPosting = async (req, res, next) => {
   try {
     const {
       companyName,
@@ -169,15 +174,13 @@ exports.createJobPosting = async (req, res) => {
 
     // 필수 입력 필드 검증
     if (!link||!companyName || !title || !experience || !education || !employmentType || salary === undefined || !location || !deadline || !keywords || !skills) {
-      return res.status(400).json({
-        message: 'All fields (companyName, title, experience, education, employmentType, salary, location, deadline, keywords, skills) are required.'
-      });
+      return next(createError(400, '모든 필드를 입력하셔야합니다.'));
     }
 
     // 회사명 확인 및 등록
     let company = await Company.findOne({ where: { name: companyName } });
     if (!company) {
-      return res.status(400).json({ message: 'Company do not exist' });
+      return next(createError(400, '회사가 존재하지 않습니다.'));
     }
 
     // 공고 등록
@@ -199,7 +202,7 @@ exports.createJobPosting = async (req, res) => {
       const keywordInstances = await Keyword.findAll({ where: { name: keywords } });
       await newJobPosting.addKeywords(keywordInstances);
     } else {
-      return res.status(400).json({ message: 'Keywords must be an array and cannot be empty.' });
+      return next(createError(400, 'keyword는 비어있으면 안되고 배열이어야합니다.'));
     }
 
     // 기술 스택 저장
@@ -207,30 +210,29 @@ exports.createJobPosting = async (req, res) => {
       const skillInstances = await Skill.findAll({ where: { name: skills } });
       await newJobPosting.addSkills(skillInstances);
     } else {
-      return res.status(400).json({ message: 'Skills must be an array and cannot be empty.' });
+      return next(createError(400, 'skill는 비어있으면 안되고 배열이어야합니다.'));
     }
 
     res.status(201).json({
-      message: 'Job posting created successfully',
+      message: '등록 완료',
       jobPosting: newJobPosting
     });
   } catch (error) {
-    res.status(500).json({ message: 'Error creating job posting', error });
+    next(createError(500, '서버 오류'));
   }
 };
 
-
 // 공고 수정 (PUT /jobs/:id)
-exports.updateJobPosting = async (req, res) => {
+exports.updateJobPosting = async (req, res, next) => {
   try {
     const { id: jobPostingId } = req.params;
     const { id: userId, role } = req.user;
 
     const jobPosting = await JobPosting.findByPk(jobPostingId);
-    if (!jobPosting) return res.status(404).json({ message: 'Job posting not found' });
+    if (!jobPosting) return next(createError(404, '공고가 존재하지 않습니다.'));
     
     if (jobPosting.userId !== userId && !['admin', 'manager'].includes(role)) {
-      return res.status(403).json({ message: 'Unauthorized to update this job posting' });
+      return next(createError(403, '업데이트 권한이 없습니다.'));
     }
 
     // req.body에 companyName이 있는 경우
@@ -240,7 +242,7 @@ exports.updateJobPosting = async (req, res) => {
       // Company 테이블에서 해당 회사명을 확인
       const company = await Company.findOne({ where: { name: companyName } });
       if (!company) {
-        return res.status(400).json({ message: 'Company does not exist' });
+        return next(createError(400, '회사가 존재하지 않습니다.'));
       }
 
       // companyId를 req.body에 추가하고 companyName은 삭제
@@ -250,27 +252,27 @@ exports.updateJobPosting = async (req, res) => {
 
     // 수정 처리
     const updatedJobPosting = await jobPosting.update(req.body);
-    res.status(200).json({ message: 'Job posting updated successfully', job: updatedJobPosting });
+    res.status(200).json({ message: '업데이트에 성공하였습니다다', job: updatedJobPosting });
   } catch (error) {
-    res.status(500).json({ message: 'Error updating job posting', error });
+    next(createError(500, '서버 오류류'));
   }
 };
 
 // 공고 삭제 (DELETE /jobs/:id)
-exports.deleteJobPosting = async (req, res) => {
+exports.deleteJobPosting = async (req, res, next) => {
   try {
     const { id: jobPostingId } = req.params;
     const { id: userId, role } = req.user;
     const jobPosting = await JobPosting.findByPk(jobPostingId);
     if (!jobPosting) {
-      return res.status(404).json({ message: 'Job posting not found' });
+      return next(createError(404, '공고가 존재하지 않습니다.'));
     }
     if (jobPosting.userId !== userId && !['admin', 'manager'].includes(role)) {
-      return res.status(403).json({ message: 'Unauthorized to delete this job posting' });
+      return next(createError(403, '삭제 권한이 없습니다.'));
     }
     await jobPosting.destroy();
-    res.status(200).json({ message: 'Job posting deleted successfully' });
+    res.status(200).json({ message: '삭제에 성공하였습니다.' });
   } catch (error) {
-    res.status(500).json({ message: 'Error deleting job posting', error });
+    next(createError(500, '서버 오류'));
   }
 };

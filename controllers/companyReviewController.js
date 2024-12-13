@@ -1,14 +1,15 @@
 // controllers/companyReviewController.js
 const { CompanyReview, Company } = require('../models');
+const { createError } = require('../middlewares/errorHandler');
 
-exports.createReview = async (req, res) => {
+exports.createReview = async (req, res, next) => {
   try {
-    const { companyId, review } = req.body; // 요청 본문에서 기업 ID, 태그 ID, 리뷰 내용 추출
+    const { companyId, review } = req.body; // 요청 본문에서 기업 ID, 리뷰 내용 추출
 
     // 기업 존재 여부 확인
     const company = await Company.findByPk(companyId);
     if (!company) {
-      return res.status(404).json({ message: '해당 기업을 찾을 수 없습니다.' });
+      return next(createError(404, '해당 기업을 찾을 수 없습니다.'));
     }
 
     // 리뷰 생성
@@ -20,17 +21,17 @@ exports.createReview = async (req, res) => {
     return res.status(201).json(newReview);
   } catch (error) {
     console.error(error);
-    res.status(500).json({ message: '서버 오류' });
+    return next(createError(500, '서버 오류'));
   }
 };
-exports.getReviews = async (req, res) => {
+
+exports.getReviews = async (req, res, next) => {
   try {
     const { companyId } = req.query;  // 쿼리 파라미터로 필터링
     const { page = 1, limit = 10 } = req.query;  // 페이지네이션 (기본값: 1페이지, 10개 항목)
 
     const filter = {};
     if (companyId) filter.companyId = companyId;
-    if (tagId) filter.tagId = tagId;
 
     // 페이지네이션과 최신순 정렬
     const reviews = await CompanyReview.findAndCountAll({
@@ -46,6 +47,10 @@ exports.getReviews = async (req, res) => {
       limit: limit,  // 한 페이지에 표시할 항목 수
     });
 
+    if (reviews.count === 0) {
+      return next(createError(404, '리뷰를 찾을 수 없습니다.'));
+    }
+
     return res.status(200).json({
       totalCount: reviews.count,
       reviews: reviews.rows,
@@ -54,18 +59,18 @@ exports.getReviews = async (req, res) => {
     });
   } catch (error) {
     console.error(error);
-    res.status(500).json({ message: '서버 오류' });
+    return next(createError(500, '서버 오류'));
   }
 };
 
-exports.deleteReview = async (req, res) => {
+exports.deleteReview = async (req, res, next) => {
   try {
     const { id } = req.params;  // 리뷰 ID
 
     // 리뷰 조회
     const review = await CompanyReview.findByPk(id);
     if (!review) {
-      return res.status(404).json({ message: '리뷰를 찾을 수 없습니다.' });
+      return next(createError(404, '리뷰를 찾을 수 없습니다.'));
     }
 
     // 리뷰 삭제
@@ -73,6 +78,6 @@ exports.deleteReview = async (req, res) => {
     return res.status(200).json({ message: '리뷰가 삭제되었습니다.' });
   } catch (error) {
     console.error(error);
-    res.status(500).json({ message: '서버 오류' });
+    return next(createError(500, '서버 오류'));
   }
 };

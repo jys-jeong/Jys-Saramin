@@ -6,11 +6,8 @@ module.exports = (roles = []) => {
     const userId = req.user.id;      // 인증된 사용자의 ID
 
     const userParamId = req.params.id; // URL 파라미터에서 사용자 ID를 가져옵니다.
-    console.log(req.user);
-    console.log(userId);
-    console.log(userParamId);
     // 관리자 권한이거나 본인일 때만 접근 허용
-    if (roles.includes(userRole) || userId === userParamId) {
+    if (roles.includes(userRole) || userId === parseInt(userParamId)) {
       return next();
     }
 
