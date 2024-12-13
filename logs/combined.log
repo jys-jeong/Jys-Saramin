@@ -1921,3 +1921,146 @@
 2024-12-13 20:00:53 [error]: middlewareError
 2024-12-13 20:00:53 [info]: DELETE /applications/1 400 14ms
 2024-12-13 20:00:53 [info]: Performance: DELETE /applications/1 - 17ms
+2024-12-13 20:06:17 [info]: GET /api-docs/ 304 14ms
+2024-12-13 20:06:17 [info]: Performance: GET /api-docs/ - 34ms
+2024-12-13 20:06:17 [info]: GET /api-docs/swagger-ui.css 304 4ms
+2024-12-13 20:06:17 [info]: Performance: GET /api-docs/swagger-ui.css - 8ms
+2024-12-13 20:06:17 [info]: GET /api-docs/swagger-ui-bundle.js 304 2ms
+2024-12-13 20:06:17 [info]: Performance: GET /api-docs/swagger-ui-bundle.js - 4ms
+2024-12-13 20:06:17 [info]: GET /api-docs/swagger-ui-standalone-preset.js 304 1ms
+2024-12-13 20:06:17 [info]: Performance: GET /api-docs/swagger-ui-standalone-preset.js - 3ms
+2024-12-13 20:06:17 [info]: GET /api-docs/swagger-ui-init.js 200 1ms
+2024-12-13 20:06:17 [info]: Performance: GET /api-docs/swagger-ui-init.js - 6ms
+2024-12-13 20:06:17 [info]: GET /api-docs/swagger-ui.css.map 304 1ms
+2024-12-13 20:06:17 [info]: Performance: GET /api-docs/swagger-ui.css.map - 3ms
+2024-12-13 20:06:17 [info]: GET /api-docs/favicon-32x32.png 304 1ms
+2024-12-13 20:06:17 [info]: Performance: GET /api-docs/favicon-32x32.png - 2ms
+2024-12-13 20:06:30 [info]: POST /bookmarks 401 2ms
+2024-12-13 20:06:30 [info]: Performance: POST /bookmarks - 6ms
+2024-12-13 20:06:38 [info]: POST /bookmarks 201 121ms
+2024-12-13 20:06:38 [info]: Performance: POST /bookmarks - 123ms
+2024-12-13 20:06:42 [info]: POST /bookmarks 200 21ms
+2024-12-13 20:06:42 [info]: Performance: POST /bookmarks - 23ms
+2024-12-13 20:06:47 [info]: POST /bookmarks 201 20ms
+2024-12-13 20:06:47 [info]: Performance: POST /bookmarks - 23ms
+2024-12-13 20:06:49 [info]: POST /bookmarks 201 26ms
+2024-12-13 20:06:49 [info]: Performance: POST /bookmarks - 28ms
+2024-12-13 20:06:52 [info]: POST /bookmarks 201 17ms
+2024-12-13 20:06:52 [info]: Performance: POST /bookmarks - 21ms
+2024-12-13 20:06:54 [info]: POST /bookmarks 201 17ms
+2024-12-13 20:06:54 [info]: Performance: POST /bookmarks - 20ms
+2024-12-13 20:07:02 [error]: middlewareError
+2024-12-13 20:07:02 [info]: GET /bookmarks?page=1&limit=5 500 67ms
+2024-12-13 20:07:02 [info]: Performance: GET /bookmarks?page=1&limit=5 - 69ms
+2024-12-13 20:07:36 [error]: middlewareError
+2024-12-13 20:07:36 [info]: GET /bookmarks?page=1&limit=5 500 65ms
+2024-12-13 20:07:36 [info]: Performance: GET /bookmarks?page=1&limit=5 - 68ms
+2024-12-13 20:09:52 [info]: GET /bookmarks?page=1 200 82ms
+2024-12-13 20:09:52 [info]: Performance: GET /bookmarks?page=1 - 85ms
+2024-12-13 20:10:31 [error]: middlewareError
+2024-12-13 20:10:31 [info]: GET /bookmarks?page=1&limit=5 500 57ms
+2024-12-13 20:10:31 [info]: Performance: GET /bookmarks?page=1&limit=5 - 60ms
+2024-12-13 20:11:17 [info]: GET /bookmarks?page=1&limit=5 200 110ms
+2024-12-13 20:11:17 [info]: Performance: GET /bookmarks?page=1&limit=5 - 123ms
+2024-12-13 20:11:27 [info]: GET /api-docs/ 304 11ms
+2024-12-13 20:11:27 [info]: Performance: GET /api-docs/ - 15ms
+2024-12-13 20:11:27 [info]: GET /api-docs/swagger-ui.css 304 4ms
+2024-12-13 20:11:27 [info]: Performance: GET /api-docs/swagger-ui.css - 7ms
+2024-12-13 20:11:27 [info]: GET /api-docs/swagger-ui-bundle.js 304 2ms
+2024-12-13 20:11:27 [info]: Performance: GET /api-docs/swagger-ui-bundle.js - 4ms
+2024-12-13 20:11:27 [info]: GET /api-docs/swagger-ui-standalone-preset.js 304 2ms
+2024-12-13 20:11:27 [info]: Performance: GET /api-docs/swagger-ui-standalone-preset.js - 4ms
+2024-12-13 20:11:27 [info]: GET /api-docs/swagger-ui-init.js 304 1ms
+2024-12-13 20:11:27 [info]: Performance: GET /api-docs/swagger-ui-init.js - 3ms
+2024-12-13 20:11:27 [info]: GET /api-docs/swagger-ui.css.map 304 1ms
+2024-12-13 20:11:27 [info]: Performance: GET /api-docs/swagger-ui.css.map - 3ms
+2024-12-13 20:11:27 [info]: GET /api-docs/favicon-32x32.png 304 2ms
+2024-12-13 20:11:27 [info]: Performance: GET /api-docs/favicon-32x32.png - 4ms
+2024-12-13 20:17:12 [info]: GET /api-docs/ 304 15ms
+2024-12-13 20:17:12 [info]: Performance: GET /api-docs/ - 36ms
+2024-12-13 20:17:12 [info]: GET /api-docs/swagger-ui.css 304 5ms
+2024-12-13 20:17:12 [info]: Performance: GET /api-docs/swagger-ui.css - 8ms
+2024-12-13 20:17:12 [info]: GET /api-docs/swagger-ui-bundle.js 304 2ms
+2024-12-13 20:17:12 [info]: Performance: GET /api-docs/swagger-ui-bundle.js - 4ms
+2024-12-13 20:17:12 [info]: GET /api-docs/swagger-ui-init.js 200 2ms
+2024-12-13 20:17:12 [info]: Performance: GET /api-docs/swagger-ui-init.js - 6ms
+2024-12-13 20:17:12 [info]: GET /api-docs/swagger-ui-standalone-preset.js 304 1ms
+2024-12-13 20:17:12 [info]: Performance: GET /api-docs/swagger-ui-standalone-preset.js - 4ms
+2024-12-13 20:17:12 [info]: GET /api-docs/swagger-ui.css.map 304 1ms
+2024-12-13 20:17:12 [info]: Performance: GET /api-docs/swagger-ui.css.map - 3ms
+2024-12-13 20:17:13 [info]: GET /api-docs/favicon-32x32.png 304 2ms
+2024-12-13 20:17:13 [info]: Performance: GET /api-docs/favicon-32x32.png - 4ms
+2024-12-13 20:29:50 [info]: GET /api-docs/ 304 14ms
+2024-12-13 20:29:50 [info]: Performance: GET /api-docs/ - 35ms
+2024-12-13 20:29:50 [info]: GET /api-docs/swagger-ui.css 304 5ms
+2024-12-13 20:29:50 [info]: Performance: GET /api-docs/swagger-ui.css - 9ms
+2024-12-13 20:29:50 [info]: GET /api-docs/swagger-ui-bundle.js 304 3ms
+2024-12-13 20:29:50 [info]: Performance: GET /api-docs/swagger-ui-bundle.js - 5ms
+2024-12-13 20:29:50 [info]: GET /api-docs/swagger-ui-standalone-preset.js 304 3ms
+2024-12-13 20:29:50 [info]: Performance: GET /api-docs/swagger-ui-standalone-preset.js - 5ms
+2024-12-13 20:29:50 [info]: GET /api-docs/swagger-ui-init.js 200 3ms
+2024-12-13 20:29:50 [info]: Performance: GET /api-docs/swagger-ui-init.js - 9ms
+2024-12-13 20:29:50 [info]: GET /api-docs/swagger-ui.css.map 304 1ms
+2024-12-13 20:29:50 [info]: Performance: GET /api-docs/swagger-ui.css.map - 3ms
+2024-12-13 20:29:51 [info]: GET /api-docs/favicon-32x32.png 304 1ms
+2024-12-13 20:29:51 [info]: Performance: GET /api-docs/favicon-32x32.png - 4ms
+2024-12-13 20:30:27 [info]: POST /reviews 404 3ms
+2024-12-13 20:30:27 [info]: Performance: POST /reviews - 8ms
+2024-12-13 20:30:36 [info]: POST /reviews 404 2ms
+2024-12-13 20:30:36 [info]: Performance: POST /reviews - 5ms
+2024-12-13 20:32:34 [info]: POST /reviews 404 6ms
+2024-12-13 20:32:34 [info]: Performance: POST /reviews - 22ms
+2024-12-13 20:32:37 [info]: GET /api-docs/ 304 12ms
+2024-12-13 20:32:37 [info]: Performance: GET /api-docs/ - 16ms
+2024-12-13 20:32:37 [info]: GET /api-docs/swagger-ui.css 304 5ms
+2024-12-13 20:32:37 [info]: Performance: GET /api-docs/swagger-ui.css - 8ms
+2024-12-13 20:32:37 [info]: GET /api-docs/swagger-ui-bundle.js 304 2ms
+2024-12-13 20:32:37 [info]: Performance: GET /api-docs/swagger-ui-bundle.js - 4ms
+2024-12-13 20:32:37 [info]: GET /api-docs/swagger-ui-standalone-preset.js 304 1ms
+2024-12-13 20:32:37 [info]: Performance: GET /api-docs/swagger-ui-standalone-preset.js - 4ms
+2024-12-13 20:32:37 [info]: GET /api-docs/swagger-ui-init.js 200 11ms
+2024-12-13 20:32:37 [info]: Performance: GET /api-docs/swagger-ui-init.js - 18ms
+2024-12-13 20:32:37 [info]: GET /api-docs/swagger-ui.css.map 304 1ms
+2024-12-13 20:32:37 [info]: Performance: GET /api-docs/swagger-ui.css.map - 2ms
+2024-12-13 20:32:38 [info]: GET /api-docs/favicon-32x32.png 304 2ms
+2024-12-13 20:32:38 [info]: Performance: GET /api-docs/favicon-32x32.png - 5ms
+2024-12-13 20:33:07 [info]: POST /companyreview 201 98ms
+2024-12-13 20:33:07 [info]: Performance: POST /companyreview - 102ms
+2024-12-13 20:33:25 [error]: middlewareError
+2024-12-13 20:33:25 [info]: GET /companyreview?companyId=1&page=1&limit=10 500 88ms
+2024-12-13 20:33:25 [info]: Performance: GET /companyreview?companyId=1&page=1&limit=10 - 90ms
+2024-12-13 20:34:00 [info]: GET /api-docs/ 304 16ms
+2024-12-13 20:34:00 [info]: Performance: GET /api-docs/ - 36ms
+2024-12-13 20:34:00 [info]: GET /api-docs/swagger-ui.css 304 11ms
+2024-12-13 20:34:00 [info]: Performance: GET /api-docs/swagger-ui.css - 15ms
+2024-12-13 20:34:00 [info]: GET /api-docs/swagger-ui-bundle.js 304 2ms
+2024-12-13 20:34:00 [info]: Performance: GET /api-docs/swagger-ui-bundle.js - 3ms
+2024-12-13 20:34:00 [info]: GET /api-docs/swagger-ui-standalone-preset.js 304 1ms
+2024-12-13 20:34:00 [info]: Performance: GET /api-docs/swagger-ui-standalone-preset.js - 2ms
+2024-12-13 20:34:00 [info]: GET /api-docs/swagger-ui-init.js 304 2ms
+2024-12-13 20:34:00 [info]: Performance: GET /api-docs/swagger-ui-init.js - 5ms
+2024-12-13 20:34:00 [info]: GET /api-docs/swagger-ui.css.map 304 1ms
+2024-12-13 20:34:00 [info]: Performance: GET /api-docs/swagger-ui.css.map - 3ms
+2024-12-13 20:34:00 [info]: GET /api-docs/favicon-32x32.png 304 1ms
+2024-12-13 20:34:00 [info]: Performance: GET /api-docs/favicon-32x32.png - 3ms
+2024-12-13 20:34:13 [info]: GET /companyreview?companyId=1&page=1&limit=10 200 118ms
+2024-12-13 20:34:13 [info]: Performance: GET /companyreview?companyId=1&page=1&limit=10 - 122ms
+2024-12-13 20:34:24 [error]: middlewareError
+2024-12-13 20:34:24 [info]: DELETE /companyreview/1 404 35ms
+2024-12-13 20:34:24 [info]: Performance: DELETE /companyreview/1 - 37ms
+2024-12-13 20:34:38 [info]: DELETE /companyreview/3 200 38ms
+2024-12-13 20:34:38 [info]: Performance: DELETE /companyreview/3 - 40ms
+2024-12-13 20:37:50 [info]: GET /api-docs/ 304 15ms
+2024-12-13 20:37:50 [info]: Performance: GET /api-docs/ - 36ms
+2024-12-13 20:37:50 [info]: GET /api-docs/swagger-ui.css 304 8ms
+2024-12-13 20:37:50 [info]: Performance: GET /api-docs/swagger-ui.css - 11ms
+2024-12-13 20:37:50 [info]: GET /api-docs/swagger-ui-bundle.js 304 11ms
+2024-12-13 20:37:50 [info]: Performance: GET /api-docs/swagger-ui-bundle.js - 15ms
+2024-12-13 20:37:50 [info]: GET /api-docs/swagger-ui-standalone-preset.js 304 1ms
+2024-12-13 20:37:50 [info]: Performance: GET /api-docs/swagger-ui-standalone-preset.js - 3ms
+2024-12-13 20:37:50 [info]: GET /api-docs/swagger-ui-init.js 200 2ms
+2024-12-13 20:37:50 [info]: Performance: GET /api-docs/swagger-ui-init.js - 7ms
+2024-12-13 20:37:50 [info]: GET /api-docs/swagger-ui.css.map 304 2ms
+2024-12-13 20:37:50 [info]: Performance: GET /api-docs/swagger-ui.css.map - 4ms
+2024-12-13 20:37:50 [info]: GET /api-docs/favicon-32x32.png 304 1ms
+2024-12-13 20:37:50 [info]: Performance: GET /api-docs/favicon-32x32.png - 3ms

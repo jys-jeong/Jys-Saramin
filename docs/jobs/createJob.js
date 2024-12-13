@@ -1,5 +1,12 @@
 /**
  * @swagger
+ * tags:
+ *   name: JobPostings
+ *   description: 채용 공고 API
+ */
+
+/**
+ * @swagger
  * /jobs:
  *   post:
  *     summary: 채용 공고 등록

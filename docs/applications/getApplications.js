@@ -1,5 +1,12 @@
 /**
  * @swagger
+ * tags:
+ *   name: Applications
+ *   description: 지원 관리 API
+ */
+
+/**
+ * @swagger
  * /applications:
  *   get:
  *     summary: 지원 내역 조회

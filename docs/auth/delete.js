@@ -1,5 +1,12 @@
 /**
  * @swagger
+ * tags:
+ *   name: Authorization
+ *   description: 회원 관리 API
+ */
+
+/**
+ * @swagger
  * /auth/user/{id}:
  *   delete:
  *     summary: 사용자 계정 삭제

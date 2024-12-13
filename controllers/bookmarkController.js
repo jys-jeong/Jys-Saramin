@@ -45,7 +45,7 @@ exports.getBookmarks = async (req, res, next) => {
       ],
       order: [['createdAt', 'DESC']],  // 최신순으로 정렬
       offset: (page - 1) * limit,  // 페이지네이션 오프셋
-      limit: limit,  // 한 페이지에 표시할 항목 수
+      limit: parseInt(limit,10),  // 한 페이지에 표시할 항목 수
     });
 
     if (!bookmarks) {
