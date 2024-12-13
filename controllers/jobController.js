@@ -4,70 +4,104 @@ const { Op } = require('sequelize');
 // 공고 목록 조회 (GET /jobs)
 exports.getJobPostings = async (req, res) => {
   try {
-    const { page = 1, limit = 20, keyword, company, position, location, experience, wage, skill } = req.query;
+    const { page = 1, limit = 20, sortBy = 'views', keyword, company, position, location, experience, wage, skill } = req.query;
     const offset = (page - 1) * limit;
-    const parsedLimit = parseInt(limit, 10); 
+    const parsedLimit = parseInt(limit, 10);
     const where = {};
 
     // 기존 필터링 조건
-    if (keyword) where.title = { [Op.like]: `%${keyword}%` }; // 키워드 검색
-    if (position) where.title = { [Op.like]: `%${position}%` }; // 포지션 검색
-    if (location) where.location = { [Op.like]: `%${location}%` }; // 지역 필터링
-    if (experience) where.experience = experience; // 경력 필터링
-
-    // 급여 필터링 추가: wage가 요청된 값보다 높은 공고만 조회
-    if (wage) where['$Company.wage$'] = { [Op.gt]: wage }; // wage 필터링 (Company 테이블의 wage 필드 기준)
+    if (keyword) where.title = { [Op.like]: `%${keyword}%` };
+    if (location) where.location = { [Op.like]: `%${location}%` };
+    if (experience) where.experience = { [Op.like]: `%${experience}%` };
+    if (wage) where['$Company.wage$'] = { [Op.gt]: wage };
 
     const include = [];
 
     // 회사명 및 급여 필터링
     if (company || wage) {
       const companyWhere = {};
-      if (company) companyWhere.name = { [Op.like]: `%${company}%` }; // 회사명 검색
-      if (wage) companyWhere.wage = { [Op.gt]: wage }; // 급여가 wage보다 큰 공고만 조회
+      if (company) companyWhere.name = { [Op.like]: `%${company}%` };
+      if (wage) companyWhere.wage = { [Op.gt]: wage };
       include.push({
         model: Company,
         where: companyWhere,
-        attributes: ['name', 'wage'], // 회사명과 급여 포함
+        attributes: ['name', 'wage'],
       });
     } else {
       include.push({ model: Company, attributes: ['name', 'wage'] });
     }
 
     // 기술 스택 필터링
-    if (skill) {
+    if (skill || position) {
+      const skillWhere = {};
+      if (skill) skillWhere.name = { [Op.like]: `%${skill}%` };
+      if (position) skillWhere.name = { [Op.like]: `%${position}%` };
       include.push({
         model: Skill,
-        where: { name: { [Op.like]: `%${skill}%` } },  // skill 필터링
-        attributes: ['name']
+        where: skillWhere,
+        attributes: ['name'],
       });
     }
 
-    // 키워드 필터링 (JobPostingKeyword 모델을 제외하고 직접 Keyword 모델을 연결)
+    // 키워드 필터링
     if (keyword) {
       include.push({
         model: Keyword,
-        where: { name: { [Op.like]: `%${keyword}%` } }, // 키워드 검색
-        attributes: ['name']
+        where: { name: { [Op.like]: `%${keyword}%` } },
+        attributes: ['name'],
       });
+    }
+    // 데이터 조회
+    const order = [];
+
+    // 정렬 조건
+    if (sortBy === 'wage') {
+      order.push([{ model: Company }, 'wage', 'DESC']);
+    } else {
+      order.push([sortBy, 'DESC']);
     }
 
     // 데이터 조회
-    const jobPostings = await JobPosting.findAll({
+    const jobPostings = await JobPosting.findAndCountAll({
       where,
       include,
       offset,
-      limit: parsedLimit, // limit을 parsedLimit으로 설정
-
-      attributes: ['title', 'experience', 'education', 'location', 'deadline'], // JobPosting에서 필요한 컬럼만 선택
+      limit: parsedLimit,
+      order,
+      attributes: ['id', 'companyId', 'title', 'link', 'experience', 'education', 'employmentType', 'salary', 'location', 'deadline'],
     });
 
-    res.status(200).json(jobPostings);
+    // 필드 변환
+    const transformedJobPostings = jobPostings.rows.map(posting => ({
+      id: posting.id,
+      companyId: posting.companyId,
+      title: posting.title,
+      link: posting.link,
+      experience: posting.experience,
+      education: posting.education,
+      employmentType: posting.employmentType,
+      salary: posting.salary,
+      location: posting.location,
+      deadline: posting.deadline,
+      companyName: posting.Company?.name || null, // Company.name 포함
+      wage: posting.Company?.wage ? `${posting.Company.wage}만원` : null,
+    }));
+
+    res.status(200).json({
+      filters: { page, limit, sortBy, keyword, company, position, location, experience, wage, skill },
+      totalCount: jobPostings.count,
+      totalPages: Math.ceil(jobPostings.count / limit),
+      currentPage: page,
+      jobPostings: transformedJobPostings,
+    });
   } catch (error) {
     console.error('Error retrieving job postings:', error);
     res.status(500).json({ message: 'Error retrieving job postings', error });
   }
 };
+
+
+
 
 // 공고 상세 조회 (GET /jobs/:id)
 exports.getJobPostingById = async (req, res) => {

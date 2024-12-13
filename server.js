@@ -7,8 +7,9 @@ const jobRoutes = require('./routes/jobRoutes');
 const applicationsRoutes = require('./routes/applicationsRoutes');
 const bookmarkRoutes =require('./routes/bookmarkRoutes');
 const companyReviewRoutes =require('./routes/companyReviewRoutes');
+const { errorHandler } = require('./middlewares/errorHandler');
 const sequelize = require('./config/config.js');
-const { globalErrorHandler } = require('./middlewares/errorHandler');
+
 const app = express();
 app.use(bodyParser.json());
 
@@ -18,7 +19,9 @@ app.use('/jobs', jobRoutes);
 app.use('/applications',applicationsRoutes);
 app.use('/bookmarks',bookmarkRoutes);
 app.use('/companyreview', companyReviewRoutes);
-app.use(globalErrorHandler);
+app.use(errorHandler);
+
+app.use(errorHandler);
 sequelize.sync({ force: false }).then(() => {
   app.listen(17443, () => {
     console.log('Server running on http://localhost:17443');
