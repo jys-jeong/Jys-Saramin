@@ -231,9 +231,7 @@ exports.updateJobPosting = async (req, res, next) => {
     const jobPosting = await JobPosting.findByPk(jobPostingId);
     if (!jobPosting) return errorResponse(res, '공고가 존재하지 않습니다.', 'NOT_FOUND', 404);
     
-    if (jobPosting.userId !== userId && !['admin', 'manager'].includes(role)) {
-      return errorResponse(res, '수정 권한이 없습니다.', 'FORBIDDEN', 403);
-    }
+
 
     // req.body에 companyName이 있는 경우
     if (req.body.companyName) {

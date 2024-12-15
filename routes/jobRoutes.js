@@ -14,7 +14,7 @@ router.get('/:id', jobController.getJobPostingById);
 router.post('/', authenticate,jobController.createJobPosting);
 
 // 채용 공고 수정 (PUT /jobs/:id)
-router.put('/:id', authenticate, jobController.updateJobPosting);
+router.put('/:id', authenticate,authorize(['admin']), jobController.updateJobPosting);
 
 // 채용 공고 삭제 (DELETE /jobs/:id)
 router.delete('/:id', authenticate,authorize(['admin']),jobController.deleteJobPosting);

@@ -29,7 +29,7 @@
  *               title:
  *                 type: string
  *                 description: '채용 공고의 제목입니다. 예: "백엔드 개발자 모집".'
- *                 example: '프론트트 개발자 모집'
+ *                 example: '프론트 개발자 모집'
  *               link:
  *                 type: string
  *                 description: '채용 공고의 자세한 내용이 있는 링크입니다.'
@@ -78,41 +78,115 @@
  *             schema:
  *               type: object
  *               properties:
+ *                 status:
+ *                   type: string
+ *                   example: "success"
  *                 message:
  *                   type: string
- *                   example: 업데이트에 성공하였습니다.
- *                 jobPosting:
- *                   type: object
- *                   properties:
- *                     id:
- *                       type: integer
- *                     companyId:
- *                       type: integer
- *                     title:
- *                       type: string
- *                     link:
- *                       type: string
- *                     experience:
- *                       type: string
- *                     education:
- *                       type: string
- *                     employmentType:
- *                       type: string
- *                     salary:
- *                       type: integer
- *                     location:
- *                       type: string
- *                     deadline:
- *                       type: string
+ *                   example: "공고가 성공적으로 수정되었습니다."
+ *                 data:
+ *                   type: array
+ *                   items:
+ *                     type: object
+ *                     properties:
+ *                       jobPosting:
+ *                         type: object
+ *                         properties:
+ *                           id:
+ *                             type: integer
+ *                             example: 6
+ *                           companyId:
+ *                             type: integer
+ *                             example: 6
+ *                           title:
+ *                             type: string
+ *                             example: 프론트 개발자 모집
+ *                           link:
+ *                             type: string
+ *                             example: "https://www.abc-tech.com/jobs/backend-developer"
+ *                           experience:
+ *                             type: string
+ *                             example: "경력 1년 이상"
+ *                           education:
+ *                             type: string
+ *                             example: "대졸 이상"
+ *                           employmentType:
+ *                             type: string
+ *                             example: "정규직"
+ *                           salary:
+ *                             type: string
+ *                             example: IT개발·데이터 스크랩 급상승
+ *                           location:
+ *                             type: string
+ *                             example: "서울"
+ *                           deadline:
+ *                             type: string
+ *                             example: "2024-12-31"
  * 
  *       400:
  *         description: 회사가 존재하지 않습니다.
  *       401:
  *         description: Authentication required 
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 status:
+ *                   type: string
+ *                   example: "error"
+ *                 statusCode:
+ *                   type: integer
+ *                   example: 401
+ *                 message:
+ *                   type: string
+ *                   example: Authentication required 
  *       403:
- *         description: Invalid token / 업데이트 권한이 없습니다.
+ *         description: Invalid token / 사용자가 존재하지 않습니다. / 유효하지 않은 토큰입니다. / 삭제 권한이 없습니다.
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 status:
+ *                   type: string
+ *                   example: "error"
+ *                 statusCode:
+ *                   type: integer
+ *                   example: 403
+ *                 message:
+ *                   type: string
+ *                   example: Invalid token / 사용자가 존재하지 않습니다. / 유효하지 않은 토큰입니다. / 삭제 권한이 없습니다.
  *       404:
- *         description: 공고가 존재하지 않습니다.
+ *         description: 공고가 존재하지 않습니다. / 회사가 존재하지 않습니다.
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 status:
+ *                   type: string
+ *                   example: "error"
+ *                 statusCode:
+ *                   type: integer
+ *                   example: 404
+ *                 message:
+ *                   type: string
+ *                   example: 공고가 존재하지 않습니다. / 회사가 존재하지 않습니다.
  *       500:
  *         description: 서버 오류
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 status:
+ *                   type: string
+ *                   example: "error"
+ *                 statusCode:
+ *                   type: integer
+ *                   example: 500
+ *                 message:
+ *                   type: string
+ *                   example: 서버 오류 발생
  */
