@@ -1,4 +1,4 @@
-// authorize.js (권한 검사 미들웨어)
+const {  errorResponse } = require('../utils/responseHandler');
 module.exports = (roles = []) => {
   // 기본값은 빈 배열, 배열에 있는 역할만 접근을 허용
   return (req, res, next) => {
@@ -11,7 +11,6 @@ module.exports = (roles = []) => {
       return next();
     }
 
-    // 권한이 없는 경우
-    return res.status(403).json({ message: '삭제 권한이 없습니다.' });
+    return errorResponse(res, '삭제 권한이 없습니다.', 'UNAUTHORIZED', 403);
   };
 };

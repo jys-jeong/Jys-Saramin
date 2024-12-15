@@ -104,9 +104,9 @@ exports.getJobPostings = async (req, res, next) => {
     }));
 
     return successResponse(res, transformedJobPostings, {
-      currentPage: page,
-      totalPages: Math.ceil(transformedJobPostings.count / limit),
-      totalItems: transformedJobPostings.count,
+      currentPage: parseInt(page),
+      totalPages: Math.ceil(jobPostings.count / limit),
+      totalItems: jobPostings.count,
     });
   } catch (error) {
     console.error('Error retrieving job postings:', error);

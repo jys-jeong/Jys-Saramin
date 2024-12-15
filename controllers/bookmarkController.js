@@ -1,11 +1,17 @@
 const { Bookmark, JobPosting } = require('../models');
 const { createError } = require('../middlewares/errorHandler');
 const { successResponse, errorResponse } = require('../utils/responseHandler');
+
 exports.toggleBookmark = async (req, res, next) => {
   try {
     const { jobPostingId } = req.body;  // 요청 본문에서 jobPostingId 추출
     const { id: userId } = req.user;  // JWT에서 사용자 ID 추출
 
+
+    const jobPosting = await JobPosting.findByPk(jobPostingId);
+    if (!jobPosting) {
+      return errorResponse(res, '해당 공고가 존재하지 않습니다.', 'NOT_FOUND', 404);
+    }
     // 해당 사용자와 구인 공고에 대한 북마크 존재 여부 확인
     const existingBookmark = await Bookmark.findOne({
       where: { userId, jobPostingId },

@@ -31,6 +31,10 @@ exports.getReviews = async (req, res, next) => {
     const { page = 1, limit = 10 } = req.query;  // 페이지네이션 (기본값: 1페이지, 10개 항목)
 
     const filter = {};
+    const company = await Company.findByPk(companyId);
+    if (!company) {
+      return errorResponse(res, '해당 기업을 찾을 수 없습니다.', 'NOT_FOUND', 404);
+    }
     if (companyId) filter.companyId = companyId;
 
     // 페이지네이션과 최신순 정렬

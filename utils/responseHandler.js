@@ -11,7 +11,7 @@ const successResponse = (res, data, pagination = null,message=null) => {
     };
   
     if (pagination) {
-      response.pagination = pagination;
+        response.pagination = pagination;
     }
     if(message){
         response.message=message;

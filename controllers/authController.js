@@ -24,7 +24,7 @@ exports.login = async (req, res, next) => {
   try {
     const { email, password } = req.body;
     const user = await User.findOne({ where: { email } });
-    console.log(user);
+    console.log(user.id);
     console.log(email,password);
     if (!user) {
       return errorResponse(res, '존재하지 않는 사용자입니다.', 'USER_NOT_FOUND', 401);
@@ -38,14 +38,14 @@ exports.login = async (req, res, next) => {
 
     // Access Token 발급
     const accessToken = jwt.sign(
-      { id: user.id, email: user.email, role: user.role },
+      { id: user.id, email: user.email, name:user.name, role: user.role },
       JWT_SECRET, 
       { expiresIn: '1h' } // 1시간 유효
     );
 
     // Refresh Token 발급
     const refreshToken = jwt.sign(
-      { id: user.id, email: user.email, role: user.role },
+      { id: user.id, email: user.email, name:user.name, role: user.role },
       JWT_REFRESH_SECRET, // 별도의 비밀 키로 Refresh Token 생성
       { expiresIn: '7d' } // 7일 유효
     );
@@ -92,7 +92,7 @@ exports.refreshToken = async (req, res, next) => {
 
       // 새로운 Access 토큰 발급
       const newAccessToken = jwt.sign(
-        { id: decoded.id, email: decoded.email, role: decoded.role },
+        { id: decoded.id, email: decoded.email, name:decoded.name, role: decoded.role },
         process.env.JWT_SECRET || 'default_secret',
         { expiresIn: '1h' }
       );
@@ -121,12 +121,24 @@ exports.updateProfile = async (req, res,next) => {
     if (updatedUser[0] === 0) {
       return errorResponse(res, '잘못된 입력, 파라미터 오류', 'INVALID_INPUT', 400);
     }
+    console.log(name);
     const newAccessToken = jwt.sign(
-      { id: req.user.id, email: req.user.email, role: req.user.role },
+      { id: userId, email: email, name:name,role: req.user.role },
       process.env.JWT_SECRET || 'default_secret',
       { expiresIn: '1h' }
     );
-    return successResponse(res, { message: '프로필 업데이트 성공', accessToken: newAccessToken });
+    const refreshToken = jwt.sign(
+      { id: userId, email: email, name:name,role: req.user.role },
+      JWT_REFRESH_SECRET, // 별도의 비밀 키로 Refresh Token 생성
+      { expiresIn: '7d' } // 7일 유효
+    );
+    await RefreshToken.create({
+      token: refreshToken,
+      userId: userId,
+      createdAt: new Date(),  
+      expiresAt: (new Date()) + 7
+    });
+    return successResponse(res, {  accessToken: newAccessToken, refreshToken: refreshToken }, null, '프로필 업데이트 성공');
   } catch (error) {
     console.error(error);
     return errorResponse(res, '서버 오류 발생', 'SERVER_ERROR', 500);

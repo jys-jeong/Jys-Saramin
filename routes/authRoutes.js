@@ -5,7 +5,7 @@ const { authenticate } = require('../middlewares/authMiddleware');
 const authorize = require('../middlewares/permissionMiddleware');
 const { registerValidation, validate } = require('../middlewares/validationMiddleware');
 
-router.post('/register', registerValidation, authController.register);
+router.post('/register', registerValidation,validate, authController.register);
 router.post('/login', authController.login);
 router.post('/refresh', authController.refreshToken);
 router.put('/profile', authenticate, authController.updateProfile);

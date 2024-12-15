@@ -7,7 +7,10 @@ exports.createApplication = async (req, res, next) => {
   try {
     const { jobId, status } = req.body;
     const { id: userId } = req.user;  // JWT에서 사용자 ID를 추출
-
+    const jobPosting = await JobPosting.findByPk(jobId);
+    if (!jobPosting) {
+      return errorResponse(res, '해당 공고가 존재하지 않습니다.', 'NOT_FOUND', 404);
+    }
     // 중복 지원 체크
     const existingApplication = await Application.findOne({
       where: { userId, jobId },
@@ -39,9 +42,11 @@ exports.getApplications = async (req, res, next) => {
     const { status } = req.query;
 
     const whereConditions = { userId };
-
+    if (status && !['applied', 'canceled'].includes(status)) {
+      return errorResponse(res, '잘못된 상태 값입니다. 유효한 상태 값은 "applied" 또는 "canceled"입니다.', 'INVALID_STATUS', 400);
+    }
     if (status) whereConditions.status = status;
-
+    
     // 지원 내역 조회
     const applications = await Application.findAll({
       where: whereConditions,
