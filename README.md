@@ -12,19 +12,17 @@ npm install
 
 ### 환경변수 설정
 
-.env
+.env 파일 추가
 
 ```
 PORT="YOUR 포트 번호"
 
 JWT_SECRET="YOUR JWT SECRET Key"
 JWT_REFRESH_SECRET="YOUR JWT_REFRESH_SECRET"
-export SECRET_KEY=<YOUR SECRET KEY TO JWT ENCODE>
-export DB_USER=<DB USER>
-export DB_PASSWORD=<DB PASSWORD>
+
 ```
 
-/config/config.json
+/config/config.json  파일 추가
 ```
 {
   "development": {
