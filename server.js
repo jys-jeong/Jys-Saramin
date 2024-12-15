@@ -33,8 +33,9 @@ app.use((err, req, res, next) => {
   logger.error(`Error: ${err.message}`);
 
 });
+console.log(process.env.PORT);
 sequelize.sync({ force: false }).then(() => {
-  app.listen(8080,() => {
-    console.log(`Server running on http://localhost:10241`);
+  app.listen(process.env.PORT,() => {
+    console.log(`Server running on http://localhost:${process.env.PORT}`);
   });
 });
