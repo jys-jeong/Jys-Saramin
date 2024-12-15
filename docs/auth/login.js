@@ -29,14 +29,54 @@
  *             schema:
  *               type: object
  *               properties:
- *                 accessToken:
+ *                 status:
  *                   type: string
- *                   example: "accessToken 발급"
- *                 refreshToken:
+ *                   description: 성공 여부
+ *                   example: "success"
+ *                 message:
  *                   type: string
- *                   example: "refreshTokenToken 발급"
+ *                   example: 지원이 취소되었습니다.
+ *                 data:
+ *                   type: array
+ *                   items:
+ *                     type: object
+ *                     properties:
+ *                       accessToken:
+ *                         type: string
+ *                         example: "accessToken 발급"
+ *                       refreshToken:
+ *                         type: string
+ *                         example: "refreshTokenToken 발급"
  *       401:
- *         description: 입력하신 비밀번호가 틀렸습니다. / 존재하지 않는 user입니다.
+ *         description: 존재하지 않는 사용자 입니다. / 입력하신 비밀번호가 틀렸습니다./
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 status:
+ *                   type: string
+ *                   example: "error"
+ *                 statusCode:
+ *                   type: integer
+ *                   example: 401
+ *                 message:
+ *                   type: string
+ *                   example: Authentication required
  *       500:
- *         description: 서버 오류 발생
+ *         description: 서버 오류
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 status:
+ *                   type: string
+ *                   example: "error"
+ *                 statusCode:
+ *                   type: integer
+ *                   example: 500
+ *                 message:
+ *                   type: string
+ *                   example: 서버 오류
  */

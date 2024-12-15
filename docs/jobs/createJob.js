@@ -72,55 +72,117 @@
  *                 example: ["JavaScript", "Node.js", "MySQL"]
  *     responses:
  *       201:
- *         description: 공고 등록 완료
+ *         description: 공고 등록 성공
  *         content:
  *           application/json:
  *             schema:
  *               type: object
  *               properties:
+ *                 status:
+ *                   type: string
+ *                   example: "success"
  *                 message:
  *                   type: string
- *                   example: 등록 완료
- *                 jobPosting:
+ *                   example: "공고 등록이 완료되었습니다."
+ *                 data:
  *                   type: object
  *                   properties:
- *                     id:
- *                       type: integer
- *                       example: 320
- *                     companyId:
- *                       type: integer
- *                       example: 4
- *                     title:
- *                       type: string
- *                       example: 백엔드 개발자 모집
- *                     link:
- *                       type: string
- *                       example: 'https://www.example.com/jobs/backend-developer'
- *                     experience:
- *                       type: string
- *                       example: '경력 1년 이상'
- *                     education:
- *                       type: string
- *                       example: '대졸 이상'
- *                     employmentType:
- *                       type: string
- *                       example: '정규직'
- *                     salary:
- *                       type: integer
- *                       example: 3000
- *                     location:
- *                       type: string
- *                       example: '서울'
- *                     deadline:
- *                       type: string
- *                       example: '2024-12-31'
+ *                     jobPosting:
+ *                       type: object
+ *                       properties:
+ *                         id:
+ *                           type: integer
+ *                           example: 320
+ *                         companyId:
+ *                           type: integer
+ *                           example: 4
+ *                         title:
+ *                           type: string
+ *                           example: "백엔드 개발자 모집"
+ *                         link:
+ *                           type: string
+ *                           example: "https://www.example.com/jobs/backend-developer"
+ *                         experience:
+ *                           type: string
+ *                           example: "경력 1년 이상"
+ *                         education:
+ *                           type: string
+ *                           example: "대졸 이상"
+ *                         employmentType:
+ *                           type: string
+ *                           example: "정규직"
+ *                         salary:
+ *                           type: integer
+ *                           example: 3000
+ *                         location:
+ *                           type: string
+ *                           example: "서울"
+ *                         deadline:
+ *                           type: string
+ *                           example: "2024-12-31"
  * 
  *       400:
- *         description: 모든 필드를 입력하셔야합니다. / 회사가 존재하지 않습니다. / keyword는 비어있으면 안되고 배열이어야합니다. / skills는 비어있으면 안되고 배열이어야합니다.
+ *         description: 입력값 검증 실패
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 status:
+ *                   type: string
+ *                   example: "error"
+ *                 statusCode:
+ *                   type: integer
+ *                   example: 400
+ *                 message:
+ *                   type: string
+ *                   example: "모든 필드를 입력하셔야합니다. / 회사가 존재하지 않습니다."
  *       401:
  *         description: Authentication required 
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 status:
+ *                   type: string
+ *                   example: "error"
+ *                 statusCode:
+ *                   type: integer
+ *                   example: 401
+ *                 message:
+ *                   type: string
+ *                   example: Authentication required 
  *       403:
- *         description: Invalid token 
+ *         description: Invalid token / 사용자가 존재하지 않습니다. / 유효하지 않은 토큰입니다. / 삭제 권한이 없습니다.
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 status:
+ *                   type: string
+ *                   example: "error"
+ *                 statusCode:
+ *                   type: integer
+ *                   example: 403
+ *                 message:
+ *                   type: string
+ *                   example: Invalid token / 사용자가 존재하지 않습니다. / 유효하지 않은 토큰입니다. / 삭제 권한이 없습니다.
  *       500:
  *         description: 서버 오류
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 status:
+ *                   type: string
+ *                   example: "error"
+ *                 statusCode:
+ *                   type: integer
+ *                   example: 500
+ *                 message:
+ *                   type: string
+ *                   example: 서버 오류 발생
  */

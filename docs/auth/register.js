@@ -37,28 +37,63 @@
  *             schema:
  *               type: object
  *               properties:
+ *                 status:
+ *                   type: string
+ *                   description: 성공 여부
+ *                   example: "success"
  *                 message:
  *                   type: string
  *                   example: "회원가입 완료"
- *                 user:
- *                   type: object
- *                   properties:
- *                     id:
- *                       type: integer
- *                       example: user@example.com
- *                     email:
- *                       type: string
- *                       example: "password123"
- *                     name:
- *                       type: string
- *                       example: "John Doe"
- *                     role:
- *                       type: string
- *                       example: "user"
+ *                 data:
+ *                   type: array
+ *                   items:
+ *                     type: object
+ *                     properties:
+ *                       user:
+ *                         type: object
+ *                         properties:
+ *                           id:
+ *                             type: integer
+ *                             example: user@example.com
+ *                           email:
+ *                             type: string
+ *                             example: "password123"
+ *                           name:
+ *                             type: string
+ *                             example: "John Doe"
+ *                           role:
+ *                             type: string
+ *                             example: "user"
  *       400:
  *         description: "잘못된 요청 (예: 유효하지 않은 이메일 형식 또는 중복된 이메일) / 이메일은 이미 사용 중입니다. / 적어도 6자 이상 입력해주세요 / 2자 이상 10자 이하로 입력해주세요 / admin, manager, user 중에 하나만 입력해주세요"
- *       401:
- *         description: 존재하지 않는 user입니다.
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 status:
+ *                   type: string
+ *                   example: "error"
+ *                 statusCode:
+ *                   type: integer
+ *                   example: 400
+ *                 message:
+ *                   type: string
+ *                   example: "잘못된 요청 (예: 유효하지 않은 이메일 형식 또는 중복된 이메일) / 이메일은 이미 사용 중입니다. / 적어도 6자 이상 입력해주세요 / 2자 이상 10자 이하로 입력해주세요 / admin, manager, user 중에 하나만 입력해주세요"
  *       500:
  *         description: 서버 오류
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 status:
+ *                   type: string
+ *                   example: "error"
+ *                 statusCode:
+ *                   type: integer
+ *                   example: 500
+ *                 message:
+ *                   type: string
+ *                   example: 서버 오류
  */

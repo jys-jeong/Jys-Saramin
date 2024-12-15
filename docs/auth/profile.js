@@ -35,20 +35,89 @@
  *             schema:
  *               type: object
  *               properties:
+ *                 status:
+ *                   type: string
+ *                   description: 성공 여부
+ *                   example: "success"
  *                 message:
  *                   type: string
  *                   example: "프로필 업데이트 성공"
- *                 accessToken:
- *                   type: string
- *                   example: "프로필이 새로 업데이트 되어 새 accessToken 발급"
+ *                 data:
+ *                   type: array
+ *                   items:
+ *                     type: object
+ *                     properties:
+ *                       accessToken:
+ *                         type: string
+ *                         example: "프로필이 새로 업데이트 되어 새 accessToken 발급"
+ *                       refreshToken:
+ *                         type: string
+ *                         example: "프로필이 새로 업데이트 되어 새 refreshToken 발급"
  *       400:
  *         description: 잘못된 입력, 파라미터 오류
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 status:
+ *                   type: string
+ *                   example: "error"
+ *                 statusCode:
+ *                   type: integer
+ *                   example: 400
+ *                 message:
+ *                   type: string
+ *                   example: 잘못된 입력, 파라미터 오류
  *       401:
  *         description: Authentication required 
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 status:
+ *                   type: string
+ *                   example: "error"
+ *                 statusCode:
+ *                   type: integer
+ *                   example: 401
+ *                 message:
+ *                   type: string
+ *                   example: Authentication required
  *       403:
- *         description: Invalid token(자기 자신만 수정 가능)
+ *         description: Invalid token / 사용자가 존재하지 않습니다. / 유효하지 않은 토큰입니다.
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 status:
+ *                   type: string
+ *                   example: "error"
+ *                 statusCode:
+ *                   type: integer
+ *                   example: 403
+ *                 message:
+ *                   type: string
+ *                   example: Invalid token / 사용자가 존재하지 않습니다. / 유효하지 않은 토큰입니다.
  *       500:
- *         description: 서버 오류 발생
+ *         description: 서버 오류
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 status:
+ *                   type: string
+ *                   example: "error"
+ *                 statusCode:
+ *                   type: integer
+ *                   example: 500
+ *                 message:
+ *                   type: string
+ *                   example: 서버 오류 발생
+ * 
  * /auth/user/profile:
  *   get:
  *     summary: 자신의 프로필 조회
@@ -65,29 +134,97 @@
  *             schema:
  *               type: object
  *               properties:
- *                 user:
- *                   type: object
- *                   properties:
- *                     id:
- *                       type: integer
- *                       example: 1
- *                     email:
- *                       type: string
- *                       example: "user@example.com"
- *                     name:
- *                       type: string
- *                       example: "Alex"
- *                     role:
- *                       type: string
- *                       example: "user"
+ *                 status:
+ *                   type: string
+ *                   description: 성공 여부
+ *                   example: "success"
+ *                 message:
+ *                   type: string
+ *                   example: 프로필 조회 성공
+ *                 data:
+ *                   type: array
+ *                   items:
+ *                     type: object
+ *                     properties:
+ *                       user:
+ *                         type: object
+ *                         properties:
+ *                       id:
+ *                         type: integer
+ *                         example: 1
+ *                       email:
+ *                         type: string
+ *                         example: "user@example.com"
+ *                       name:
+ *                         type: string
+ *                         example: "Alex"
+ *                       role:
+ *                         type: string
+ *                         example: "user"
  *       401:
  *         description: Authentication required 
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 status:
+ *                   type: string
+ *                   example: "error"
+ *                 statusCode:
+ *                   type: integer
+ *                   example: 401
+ *                 message:
+ *                   type: string
+ *                   example: Authentication required
  *       403:
- *         description: Invalid token(자기 자신만 수정 가능)
+ *         description: Invalid token / 사용자가 존재하지 않습니다. / 유효하지 않은 토큰입니다.
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 status:
+ *                   type: string
+ *                   example: "error"
+ *                 statusCode:
+ *                   type: integer
+ *                   example: 403
+ *                 message:
+ *                   type: string
+ *                   example: Invalid token / 사용자가 존재하지 않습니다. / 유효하지 않은 토큰입니다.
  *       404:
- *         description: 요청한 자원 없음
+ *         description: 사용자가 존재하지 않습니다.
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 status:
+ *                   type: string
+ *                   example: "error"
+ *                 statusCode:
+ *                   type: integer
+ *                   example: 404
+ *                 message:
+ *                   type: string
+ *                   example: 사용자를 찾을 수 없습니다.
  *       500:
- *         description: 서버 오류 발생
+ *         description: 서버 오류
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 status:
+ *                   type: string
+ *                   example: "error"
+ *                 statusCode:
+ *                   type: integer
+ *                   example: 500
+ *                 message:
+ *                   type: string
+ *                   example: 서버 오류 발생
  * 
  * 
  */

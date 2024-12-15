@@ -269,9 +269,7 @@ exports.deleteJobPosting = async (req, res, next) => {
     if (!jobPosting) {
       return errorResponse(res, '공고가 존재하지 않습니다.', 'NOT_FOUND', 404);
     }
-    if (jobPosting.userId !== userId && !['admin', 'manager'].includes(role)) {
-      return errorResponse(res, '삭제 권한이 없습니다.', 'FORBIDDEN', 403);
-    }
+
     await jobPosting.destroy();
     return successResponse(res, { message: '공고가 성공적으로 삭제되었습니다.' });
   } catch (error) {

@@ -28,47 +28,58 @@
  *         content:
  *           application/json:
  *             schema:
- *               type: array
- *               items:
- *                 type: object
- *                 properties:
- *                   id:
- *                     type: integer
- *                     description: 지원 ID
- *                     example: 1
- *                   userId:
- *                     type: integer
- *                     description: 지원자 ID
- *                     example: 1
- *                   jobId:
- *                     type: integer
- *                     description: 채용 공고 ID
- *                     example: 1
- *                   status:
- *                     type: string
- *                     description: 지원 상태
- *                     example: applied
- *                   date:
- *                     type: string
- *                     format: date-time
- *                     description: 지원 날짜
- *                   JobPosting:
+ *               type: object
+ *               properties:
+ *                 status:
+ *                   type: string
+ *                   description: 성공 여부
+ *                   example: "success"
+ *                 message:
+ *                   type: string
+ *                   description: 응답 메시지
+ *                   example: "지원 내역 조회 성공"
+ *                 data:
+ *                   type: array
+ *                   items:
  *                     type: object
  *                     properties:
- *                       title:
- *                         type: string
- *                         description: 채용 공고 제목
- *                         example: "백엔드 개발자 구합니다"
- *                       companyId:
+ *                       id:
  *                         type: integer
- *                         description: 회사 ID
- *                         example: 123
- *                       location:
+ *                         description: 지원 ID
+ *                         example: 1
+ *                       userId:
+ *                         type: integer
+ *                         description: 지원자 ID
+ *                         example: 1
+ *                       jobId:
+ *                         type: integer
+ *                         description: 채용 공고 ID
+ *                         example: 1
+ *                       status:
  *                         type: string
- *                         description: 근무지 위치
- *                         example: 서울 강남구 
+ *                         description: 지원 상태
+ *                         example: applied
+ *                       date:
+ *                         type: string
+ *                         format: date-time
+ *                         description: 지원 날짜
+ *                       JobPosting:
+ *                         type: object
+ *                         properties:
+ *                           title:
+ *                             type: string
+ *                             description: 채용 공고 제목
+ *                             example: "백엔드 개발자 구합니다"
+ *                           companyId:
+ *                             type: integer
+ *                             description: 회사 ID
+ *                             example: 123
+ *                           location:
+ *                             type: string
+ *                             description: 근무지 위치
+ *                             example: 서울 강남구
  *       400:
- *         description: 권한 검사사 
+ *         description: 권한 검사
  *         content:
  *           application/json:
  *             schema:

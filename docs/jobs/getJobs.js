@@ -41,14 +41,14 @@
  *         schema:
  *           type: string
  *         description: "회사명으로 필터링(예: (주)꿈선생, 화랑 등)"
- *         example: 마인드윈
+ *         example: 조베이스(주)
  *       - in: query
  *         name: position
  *         required: false
  *         schema:
  *           type: string
  *         description: "직무로 필터링(예: 프론트엔드, AWS, 서버개발, 백엔드 등)"
- *         example: 풀스택
+ *         example: 백엔드
  *       - in: query
  *         name: location
  *         required: false
@@ -69,7 +69,7 @@
  *         schema:
  *           type: integer
  *         description: "급여로 필터링 (급여(만)가 이 값 이상인 공고)"
- *         example: 3000
+ *         example: 0
  *       - in: query
  *         name: skill
  *         required: false
@@ -85,67 +85,94 @@
  *             schema:
  *               type: object
  *               properties:
- *                 filters:
- *                   type: object
- *                   properties:
- *                     page:
- *                       type: integer
- *                     limit:
- *                       type: integer
- *                     sortby:
- *                       type: string
- *                     keyword:
- *                       type: string
- *                     company:
- *                       type: string
- *                     position:
- *                       type: string
- *                     location:
- *                       type: string
- *                     experience:
- *                       type: string
- *                     wage:
- *                       type: integer
- *                     skill:
- *                       type: string
- *                 totalCount:
- *                   type: integer
- *                 totalPages:
- *                   type: integer
- *                 currentPage:
- *                   type: integer
- *                 jobPostings:
+ *                 status:
+ *                   type: string
+ *                   example: "success"
+ *                 data:
  *                   type: array
  *                   items:
  *                     type: object
  *                     properties:
  *                       id:
  *                         type: integer
+ *                         example: 6
  *                       companyId:
  *                         type: integer
+ *                         example: 6
  *                       title:
  *                         type: string
+ *                         example: "[솔루션] 백엔드 개발자 모집(python)"
  *                       link:
  *                         type: string
+ *                         example: https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=49555726&location=ts&searchword=python&searchType=search&paid_fl=n&search_uuid=cf6effd7-7dde-4ab8-8e5c-05b64fb54aeb
  *                       experience:
  *                         type: string
+ *                         example: 경력무관
  *                       education:
  *                         type: string
+ *                         example: 대졸↑
  *                       employmentType:
  *                         type: string
+ *                         example: 정규직
  *                       salary:
  *                         type: integer
+ *                         example: 인기있는
  *                       location:
  *                         type: string
+ *                         example: 서울  강남구
  *                       deadline:
  *                         type: string
+ *                         example: 2024-01-08 00:00:00
+ *                       views:
+ *                         type: integer
+ *                         example: 2
  *                       companyName:
  *                         type: string
+ *                         example: 조베이스(주)
  *                       wage:
  *                         type: string
- * 
- *       400:
- *         description: 해당하는 데이터가 존재하지 않습니다. 
+ *                         example: 0
+ *                 pagination:
+ *                   type: object
+ *                   properties:
+ *                     currentPage:
+ *                       type: integer
+ *                     totalPages:
+ *                       type: integer
+ *                     totalItems:
+ *                       type: integer
+ *       404:
+ *         description: 해당하는 데이터가 존재하지 않습니다.
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 status:
+ *                   type: string
+ *                   example: "error"
+ *                 statusCode:
+ *                   type: integer
+ *                   example: 404
+ *                 message:
+ *                   type: string
+ *                   example: "해당하는 데이터가 존재하지 않습니다."
+
  *       500:
  *         description: 서버 오류
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 status:
+ *                   type: string
+ *                   example: "error"
+ *                 statusCode:
+ *                   type: integer
+ *                   example: 500
+ *                 message:
+ *                   type: string
+ *                   example: "서버 오류가 발생했습니다."
+
  */

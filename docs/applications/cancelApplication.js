@@ -24,6 +24,10 @@
  *             schema:
  *               type: object
  *               properties:
+ *                 status:
+ *                   type: string
+ *                   description: 성공 여부
+ *                   example: "success"
  *                 message:
  *                   type: string
  *                   example: 지원이 취소되었습니다.

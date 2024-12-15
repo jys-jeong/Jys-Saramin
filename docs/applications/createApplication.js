@@ -24,7 +24,7 @@
  *                 description: 지원 상태 (기본값은 'applied')
  *                 example: applied
  *     responses:
- *       201:
+ *       200:
  *         description: 지원 성공
  *         content:
  *           application/json:
