@@ -2064,3 +2064,742 @@
 2024-12-13 20:37:50 [info]: Performance: GET /api-docs/swagger-ui.css.map - 4ms
 2024-12-13 20:37:50 [info]: GET /api-docs/favicon-32x32.png 304 1ms
 2024-12-13 20:37:50 [info]: Performance: GET /api-docs/favicon-32x32.png - 3ms
+2024-12-14 20:22:12 [info]: GET /api-docs/ 304 15ms
+2024-12-14 20:22:12 [info]: Performance: GET /api-docs/ - 31ms
+2024-12-14 20:22:12 [info]: GET /api-docs/swagger-ui.css 304 11ms
+2024-12-14 20:22:12 [info]: Performance: GET /api-docs/swagger-ui.css - 15ms
+2024-12-14 20:22:12 [info]: GET /api-docs/swagger-ui-bundle.js 304 13ms
+2024-12-14 20:22:12 [info]: Performance: GET /api-docs/swagger-ui-bundle.js - 15ms
+2024-12-14 20:22:12 [info]: GET /api-docs/swagger-ui-init.js 304 2ms
+2024-12-14 20:22:12 [info]: Performance: GET /api-docs/swagger-ui-init.js - 4ms
+2024-12-14 20:22:12 [info]: GET /api-docs/swagger-ui-standalone-preset.js 304 7ms
+2024-12-14 20:22:12 [info]: Performance: GET /api-docs/swagger-ui-standalone-preset.js - 9ms
+2024-12-14 20:43:26 [info]: GET /api-docs/ 304 14ms
+2024-12-14 20:43:26 [info]: Performance: GET /api-docs/ - 34ms
+2024-12-14 20:43:26 [info]: GET /api-docs/swagger-ui.css 304 5ms
+2024-12-14 20:43:26 [info]: Performance: GET /api-docs/swagger-ui.css - 8ms
+2024-12-14 20:43:26 [info]: GET /api-docs/swagger-ui-bundle.js 304 1ms
+2024-12-14 20:43:26 [info]: Performance: GET /api-docs/swagger-ui-bundle.js - 3ms
+2024-12-14 20:43:26 [info]: GET /api-docs/swagger-ui-standalone-preset.js 304 0ms
+2024-12-14 20:43:26 [info]: Performance: GET /api-docs/swagger-ui-standalone-preset.js - 2ms
+2024-12-14 20:43:26 [info]: GET /api-docs/swagger-ui-init.js 200 2ms
+2024-12-14 20:43:26 [info]: Performance: GET /api-docs/swagger-ui-init.js - 8ms
+2024-12-14 20:43:26 [info]: GET /api-docs/favicon-32x32.png 304 1ms
+2024-12-14 20:43:26 [info]: Performance: GET /api-docs/favicon-32x32.png - 4ms
+2024-12-14 20:51:09 [info]: GET /api-docs/ 304 5ms
+2024-12-14 20:51:09 [info]: Performance: GET /api-docs/ - 20ms
+2024-12-14 20:51:09 [info]: GET /api-docs/swagger-ui-bundle.js 304 3ms
+2024-12-14 20:51:09 [info]: Performance: GET /api-docs/swagger-ui-bundle.js - 4ms
+2024-12-14 20:51:09 [info]: GET /api-docs/swagger-ui.css 304 4ms
+2024-12-14 20:51:09 [info]: Performance: GET /api-docs/swagger-ui.css - 5ms
+2024-12-14 20:51:09 [info]: GET /api-docs/swagger-ui-standalone-preset.js 304 0ms
+2024-12-14 20:51:09 [info]: Performance: GET /api-docs/swagger-ui-standalone-preset.js - 1ms
+2024-12-14 20:51:09 [info]: GET /api-docs/swagger-ui-init.js 200 1ms
+2024-12-14 20:51:09 [info]: Performance: GET /api-docs/swagger-ui-init.js - 2ms
+2024-12-14 20:51:09 [info]: GET /api-docs/favicon-32x32.png 304 1ms
+2024-12-14 20:51:09 [info]: Performance: GET /api-docs/favicon-32x32.png - 4ms
+2024-12-14 20:51:59 [info]: GET /api-docs/ 304 19ms
+2024-12-14 20:51:59 [info]: Performance: GET /api-docs/ - 40ms
+2024-12-14 20:51:59 [info]: GET /api-docs/swagger-ui.css 304 4ms
+2024-12-14 20:51:59 [info]: Performance: GET /api-docs/swagger-ui.css - 6ms
+2024-12-14 20:51:59 [info]: GET /api-docs/swagger-ui-bundle.js 304 6ms
+2024-12-14 20:51:59 [info]: Performance: GET /api-docs/swagger-ui-bundle.js - 7ms
+2024-12-14 20:51:59 [info]: GET /api-docs/swagger-ui-standalone-preset.js 304 1ms
+2024-12-14 20:51:59 [info]: Performance: GET /api-docs/swagger-ui-standalone-preset.js - 1ms
+2024-12-14 20:51:59 [info]: GET /api-docs/swagger-ui-init.js 200 1ms
+2024-12-14 20:51:59 [info]: Performance: GET /api-docs/swagger-ui-init.js - 4ms
+2024-12-14 20:52:00 [info]: GET /api-docs/favicon-32x32.png 304 0ms
+2024-12-14 20:52:00 [info]: Performance: GET /api-docs/favicon-32x32.png - 2ms
+2024-12-14 20:53:19 [info]: GET /api-docs/ 304 14ms
+2024-12-14 20:53:19 [info]: Performance: GET /api-docs/ - 33ms
+2024-12-14 20:53:19 [info]: GET /api-docs/swagger-ui.css 304 6ms
+2024-12-14 20:53:19 [info]: Performance: GET /api-docs/swagger-ui.css - 9ms
+2024-12-14 20:53:19 [info]: GET /api-docs/swagger-ui-bundle.js 304 8ms
+2024-12-14 20:53:19 [info]: Performance: GET /api-docs/swagger-ui-bundle.js - 10ms
+2024-12-14 20:53:19 [info]: GET /api-docs/swagger-ui-standalone-preset.js 304 1ms
+2024-12-14 20:53:19 [info]: Performance: GET /api-docs/swagger-ui-standalone-preset.js - 3ms
+2024-12-14 20:53:19 [info]: GET /api-docs/swagger-ui-init.js 200 2ms
+2024-12-14 20:53:19 [info]: Performance: GET /api-docs/swagger-ui-init.js - 7ms
+2024-12-14 20:53:19 [info]: GET /api-docs/favicon-32x32.png 304 1ms
+2024-12-14 20:53:19 [info]: Performance: GET /api-docs/favicon-32x32.png - 3ms
+2024-12-14 20:53:33 [info]: GET /api-docs/ 304 23ms
+2024-12-14 20:53:33 [info]: Performance: GET /api-docs/ - 42ms
+2024-12-14 20:53:33 [info]: GET /api-docs/swagger-ui.css 304 7ms
+2024-12-14 20:53:33 [info]: Performance: GET /api-docs/swagger-ui.css - 11ms
+2024-12-14 20:53:33 [info]: GET /api-docs/swagger-ui-bundle.js 304 10ms
+2024-12-14 20:53:33 [info]: Performance: GET /api-docs/swagger-ui-bundle.js - 13ms
+2024-12-14 20:53:33 [info]: GET /api-docs/swagger-ui-standalone-preset.js 304 1ms
+2024-12-14 20:53:33 [info]: Performance: GET /api-docs/swagger-ui-standalone-preset.js - 3ms
+2024-12-14 20:53:33 [info]: GET /api-docs/swagger-ui-init.js 200 1ms
+2024-12-14 20:53:33 [info]: Performance: GET /api-docs/swagger-ui-init.js - 6ms
+2024-12-14 20:53:34 [info]: GET /api-docs/favicon-32x32.png 304 1ms
+2024-12-14 20:53:34 [info]: Performance: GET /api-docs/favicon-32x32.png - 2ms
+2024-12-14 20:54:41 [info]: GET /api-docs/ 304 15ms
+2024-12-14 20:54:41 [info]: Performance: GET /api-docs/ - 37ms
+2024-12-14 20:54:42 [info]: GET /api-docs/swagger-ui.css 304 8ms
+2024-12-14 20:54:42 [info]: Performance: GET /api-docs/swagger-ui.css - 12ms
+2024-12-14 20:54:42 [info]: GET /api-docs/swagger-ui-bundle.js 304 10ms
+2024-12-14 20:54:42 [info]: Performance: GET /api-docs/swagger-ui-bundle.js - 13ms
+2024-12-14 20:54:42 [info]: GET /api-docs/swagger-ui-standalone-preset.js 304 1ms
+2024-12-14 20:54:42 [info]: Performance: GET /api-docs/swagger-ui-standalone-preset.js - 3ms
+2024-12-14 20:54:42 [info]: GET /api-docs/swagger-ui-init.js 200 2ms
+2024-12-14 20:54:42 [info]: Performance: GET /api-docs/swagger-ui-init.js - 6ms
+2024-12-14 20:54:42 [info]: GET /api-docs/favicon-32x32.png 304 2ms
+2024-12-14 20:54:42 [info]: Performance: GET /api-docs/favicon-32x32.png - 5ms
+2024-12-14 20:54:43 [info]: GET /api-docs/ 304 3ms
+2024-12-14 20:54:43 [info]: Performance: GET /api-docs/ - 4ms
+2024-12-14 20:54:43 [info]: GET /api-docs/swagger-ui-init.js 304 1ms
+2024-12-14 20:54:43 [info]: Performance: GET /api-docs/swagger-ui-init.js - 5ms
+2024-12-14 20:54:43 [info]: GET /api-docs/swagger-ui.css 304 11ms
+2024-12-14 20:54:43 [info]: Performance: GET /api-docs/swagger-ui.css - 14ms
+2024-12-14 20:54:43 [info]: GET /api-docs/swagger-ui-bundle.js 304 7ms
+2024-12-14 20:54:43 [info]: Performance: GET /api-docs/swagger-ui-bundle.js - 8ms
+2024-12-14 20:54:43 [info]: GET /api-docs/swagger-ui-standalone-preset.js 304 9ms
+2024-12-14 20:54:43 [info]: Performance: GET /api-docs/swagger-ui-standalone-preset.js - 11ms
+2024-12-14 20:54:43 [info]: GET /api-docs/favicon-32x32.png 304 1ms
+2024-12-14 20:54:43 [info]: Performance: GET /api-docs/favicon-32x32.png - 4ms
+2024-12-14 20:54:59 [info]: GET /api-docs/ 304 15ms
+2024-12-14 20:54:59 [info]: Performance: GET /api-docs/ - 36ms
+2024-12-14 20:55:00 [info]: GET /api-docs/swagger-ui-bundle.js 304 7ms
+2024-12-14 20:55:00 [info]: Performance: GET /api-docs/swagger-ui-bundle.js - 11ms
+2024-12-14 20:55:00 [info]: GET /api-docs/swagger-ui.css 304 10ms
+2024-12-14 20:55:00 [info]: Performance: GET /api-docs/swagger-ui.css - 13ms
+2024-12-14 20:55:00 [info]: GET /api-docs/swagger-ui-standalone-preset.js 304 2ms
+2024-12-14 20:55:00 [info]: Performance: GET /api-docs/swagger-ui-standalone-preset.js - 4ms
+2024-12-14 20:55:00 [info]: GET /api-docs/swagger-ui-init.js 200 2ms
+2024-12-14 20:55:00 [info]: Performance: GET /api-docs/swagger-ui-init.js - 7ms
+2024-12-14 20:55:00 [info]: GET /api-docs/favicon-32x32.png 304 1ms
+2024-12-14 20:55:00 [info]: Performance: GET /api-docs/favicon-32x32.png - 3ms
+2024-12-14 20:55:06 [info]: GET /api-docs/ 304 4ms
+2024-12-14 20:55:06 [info]: Performance: GET /api-docs/ - 5ms
+2024-12-14 20:55:07 [info]: GET /api-docs/swagger-ui-bundle.js 304 7ms
+2024-12-14 20:55:07 [info]: Performance: GET /api-docs/swagger-ui-bundle.js - 9ms
+2024-12-14 20:55:07 [info]: GET /api-docs/swagger-ui.css 304 7ms
+2024-12-14 20:55:07 [info]: Performance: GET /api-docs/swagger-ui.css - 10ms
+2024-12-14 20:55:07 [info]: GET /api-docs/swagger-ui-standalone-preset.js 304 1ms
+2024-12-14 20:55:07 [info]: Performance: GET /api-docs/swagger-ui-standalone-preset.js - 2ms
+2024-12-14 20:55:07 [info]: GET /api-docs/swagger-ui-init.js 304 2ms
+2024-12-14 20:55:07 [info]: Performance: GET /api-docs/swagger-ui-init.js - 5ms
+2024-12-14 20:55:07 [info]: GET /api-docs/favicon-32x32.png 304 1ms
+2024-12-14 20:55:07 [info]: Performance: GET /api-docs/favicon-32x32.png - 2ms
+2024-12-14 20:55:12 [info]: GET /api-docs/ 304 16ms
+2024-12-14 20:55:12 [info]: Performance: GET /api-docs/ - 41ms
+2024-12-14 20:55:12 [info]: GET /api-docs/swagger-ui-bundle.js 304 7ms
+2024-12-14 20:55:12 [info]: Performance: GET /api-docs/swagger-ui-bundle.js - 12ms
+2024-12-14 20:55:12 [info]: GET /api-docs/swagger-ui.css 304 12ms
+2024-12-14 20:55:12 [info]: Performance: GET /api-docs/swagger-ui.css - 13ms
+2024-12-14 20:55:12 [info]: GET /api-docs/swagger-ui-standalone-preset.js 304 4ms
+2024-12-14 20:55:12 [info]: Performance: GET /api-docs/swagger-ui-standalone-preset.js - 7ms
+2024-12-14 20:55:12 [info]: GET /api-docs/swagger-ui-init.js 200 0ms
+2024-12-14 20:55:12 [info]: Performance: GET /api-docs/swagger-ui-init.js - 7ms
+2024-12-14 20:55:12 [info]: GET /api-docs/favicon-32x32.png 304 0ms
+2024-12-14 20:55:12 [info]: Performance: GET /api-docs/favicon-32x32.png - 6ms
+2024-12-14 22:03:42 [info]: POST /auth/login 200 94ms
+2024-12-14 22:03:42 [info]: Performance: POST /auth/login - 109ms
+2024-12-14 22:03:46 [info]: GET /api-docs/ 200 9ms
+2024-12-14 22:03:46 [info]: Performance: GET /api-docs/ - 16ms
+2024-12-14 22:03:46 [info]: GET /api-docs/swagger-ui-bundle.js 304 8ms
+2024-12-14 22:03:46 [info]: Performance: GET /api-docs/swagger-ui-bundle.js - 10ms
+2024-12-14 22:03:46 [info]: GET /api-docs/swagger-ui.css 304 9ms
+2024-12-14 22:03:46 [info]: Performance: GET /api-docs/swagger-ui.css - 12ms
+2024-12-14 22:03:46 [info]: GET /api-docs/swagger-ui-standalone-preset.js 304 1ms
+2024-12-14 22:03:46 [info]: Performance: GET /api-docs/swagger-ui-standalone-preset.js - 4ms
+2024-12-14 22:03:46 [info]: GET /api-docs/swagger-ui-init.js 200 2ms
+2024-12-14 22:03:46 [info]: Performance: GET /api-docs/swagger-ui-init.js - 5ms
+2024-12-14 22:03:46 [info]: GET /api-docs/favicon-32x32.png 200 9ms
+2024-12-14 22:03:46 [info]: Performance: GET /api-docs/favicon-32x32.png - 12ms
+2024-12-14 22:46:49 [info]: GET /api-docs/ 304 15ms
+2024-12-14 22:46:49 [info]: Performance: GET /api-docs/ - 35ms
+2024-12-14 22:46:49 [info]: GET /api-docs/swagger-ui-bundle.js 304 17ms
+2024-12-14 22:46:49 [info]: Performance: GET /api-docs/swagger-ui-bundle.js - 21ms
+2024-12-14 22:46:49 [info]: GET /api-docs/swagger-ui.css 304 21ms
+2024-12-14 22:46:49 [info]: Performance: GET /api-docs/swagger-ui.css - 23ms
+2024-12-14 22:46:49 [info]: GET /api-docs/swagger-ui-standalone-preset.js 304 2ms
+2024-12-14 22:46:49 [info]: Performance: GET /api-docs/swagger-ui-standalone-preset.js - 3ms
+2024-12-14 22:46:49 [info]: GET /api-docs/swagger-ui-init.js 200 1ms
+2024-12-14 22:46:49 [info]: Performance: GET /api-docs/swagger-ui-init.js - 6ms
+2024-12-14 22:46:49 [info]: GET /api-docs/favicon-32x32.png 304 1ms
+2024-12-14 22:46:49 [info]: Performance: GET /api-docs/favicon-32x32.png - 3ms
+2024-12-14 22:50:55 [info]: GET /api-docs/ 304 14ms
+2024-12-14 22:50:55 [info]: Performance: GET /api-docs/ - 42ms
+2024-12-14 22:50:55 [info]: GET /api-docs/swagger-ui.css 304 8ms
+2024-12-14 22:50:55 [info]: Performance: GET /api-docs/swagger-ui.css - 11ms
+2024-12-14 22:50:55 [info]: GET /api-docs/swagger-ui-bundle.js 304 10ms
+2024-12-14 22:50:55 [info]: Performance: GET /api-docs/swagger-ui-bundle.js - 12ms
+2024-12-14 22:50:55 [info]: GET /api-docs/swagger-ui-standalone-preset.js 304 2ms
+2024-12-14 22:50:55 [info]: Performance: GET /api-docs/swagger-ui-standalone-preset.js - 4ms
+2024-12-14 22:50:55 [info]: GET /api-docs/swagger-ui-init.js 304 3ms
+2024-12-14 22:50:55 [info]: Performance: GET /api-docs/swagger-ui-init.js - 8ms
+2024-12-14 22:50:55 [info]: GET /api-docs/favicon-32x32.png 304 1ms
+2024-12-14 22:50:55 [info]: Performance: GET /api-docs/favicon-32x32.png - 2ms
+2024-12-14 23:06:36 [info]: GET /api-docs/ 304 16ms
+2024-12-14 23:06:36 [info]: Performance: GET /api-docs/ - 40ms
+2024-12-14 23:06:36 [info]: GET /api-docs/swagger-ui.css 304 9ms
+2024-12-14 23:06:36 [info]: Performance: GET /api-docs/swagger-ui.css - 13ms
+2024-12-14 23:06:36 [info]: GET /api-docs/swagger-ui-bundle.js 304 12ms
+2024-12-14 23:06:36 [info]: Performance: GET /api-docs/swagger-ui-bundle.js - 15ms
+2024-12-14 23:06:36 [info]: GET /api-docs/swagger-ui-standalone-preset.js 304 2ms
+2024-12-14 23:06:36 [info]: Performance: GET /api-docs/swagger-ui-standalone-preset.js - 4ms
+2024-12-14 23:06:36 [info]: GET /api-docs/swagger-ui-init.js 200 3ms
+2024-12-14 23:06:36 [info]: Performance: GET /api-docs/swagger-ui-init.js - 8ms
+2024-12-14 23:06:36 [info]: GET /api-docs/favicon-32x32.png 304 1ms
+2024-12-14 23:06:36 [info]: Performance: GET /api-docs/favicon-32x32.png - 3ms
+2024-12-14 23:55:12 [info]: GET /api-docs/ 200 18ms
+2024-12-14 23:55:12 [info]: Performance: GET /api-docs/ - 47ms
+2024-12-14 23:55:12 [info]: GET /api-docs/favicon-32x32.png 304 5ms
+2024-12-14 23:55:12 [info]: Performance: GET /api-docs/favicon-32x32.png - 10ms
+2024-12-14 23:56:28 [info]: GET /api-docs/ 304 15ms
+2024-12-14 23:56:28 [info]: Performance: GET /api-docs/ - 36ms
+2024-12-14 23:56:28 [info]: GET /api-docs/swagger-ui.css 304 8ms
+2024-12-14 23:56:28 [info]: Performance: GET /api-docs/swagger-ui.css - 11ms
+2024-12-14 23:56:28 [info]: GET /api-docs/swagger-ui-bundle.js 304 19ms
+2024-12-14 23:56:28 [info]: Performance: GET /api-docs/swagger-ui-bundle.js - 23ms
+2024-12-14 23:56:28 [info]: GET /api-docs/swagger-ui-standalone-preset.js 304 2ms
+2024-12-14 23:56:28 [info]: Performance: GET /api-docs/swagger-ui-standalone-preset.js - 4ms
+2024-12-14 23:56:28 [info]: GET /api-docs/swagger-ui-init.js 200 1ms
+2024-12-14 23:56:28 [info]: Performance: GET /api-docs/swagger-ui-init.js - 7ms
+2024-12-14 23:56:28 [info]: GET /api-docs/favicon-32x32.png 304 0ms
+2024-12-14 23:56:28 [info]: Performance: GET /api-docs/favicon-32x32.png - 1ms
+2024-12-14 23:57:43 [info]: GET /api-docs/ 304 14ms
+2024-12-14 23:57:43 [info]: Performance: GET /api-docs/ - 33ms
+2024-12-14 23:57:44 [info]: GET /api-docs/swagger-ui.css 304 7ms
+2024-12-14 23:57:44 [info]: Performance: GET /api-docs/swagger-ui.css - 11ms
+2024-12-14 23:57:44 [info]: GET /api-docs/swagger-ui-bundle.js 304 10ms
+2024-12-14 23:57:44 [info]: Performance: GET /api-docs/swagger-ui-bundle.js - 11ms
+2024-12-14 23:57:44 [info]: GET /api-docs/swagger-ui-standalone-preset.js 304 2ms
+2024-12-14 23:57:44 [info]: Performance: GET /api-docs/swagger-ui-standalone-preset.js - 4ms
+2024-12-14 23:57:44 [info]: GET /api-docs/swagger-ui-init.js 200 1ms
+2024-12-14 23:57:44 [info]: Performance: GET /api-docs/swagger-ui-init.js - 7ms
+2024-12-14 23:57:44 [info]: GET /api-docs/favicon-32x32.png 304 1ms
+2024-12-14 23:57:44 [info]: Performance: GET /api-docs/favicon-32x32.png - 3ms
+2024-12-15 00:05:12 [info]: GET /api-docs/ 304 14ms
+2024-12-15 00:05:12 [info]: Performance: GET /api-docs/ - 36ms
+2024-12-15 00:05:12 [info]: GET /api-docs/swagger-ui.css 304 7ms
+2024-12-15 00:05:12 [info]: Performance: GET /api-docs/swagger-ui.css - 10ms
+2024-12-15 00:05:12 [info]: GET /api-docs/swagger-ui-bundle.js 304 8ms
+2024-12-15 00:05:12 [info]: Performance: GET /api-docs/swagger-ui-bundle.js - 10ms
+2024-12-15 00:05:12 [info]: GET /api-docs/swagger-ui-standalone-preset.js 304 1ms
+2024-12-15 00:05:12 [info]: Performance: GET /api-docs/swagger-ui-standalone-preset.js - 3ms
+2024-12-15 00:05:12 [info]: GET /api-docs/swagger-ui-init.js 200 1ms
+2024-12-15 00:05:12 [info]: Performance: GET /api-docs/swagger-ui-init.js - 8ms
+2024-12-15 00:05:12 [info]: GET /api-docs/favicon-32x32.png 304 1ms
+2024-12-15 00:05:12 [info]: Performance: GET /api-docs/favicon-32x32.png - 4ms
+2024-12-15 00:10:19 [info]: GET /api-docs/ 304 9ms
+2024-12-15 00:10:19 [info]: Performance: GET /api-docs/ - 25ms
+2024-12-15 00:10:19 [info]: GET /api-docs/swagger-ui.css 304 7ms
+2024-12-15 00:10:19 [info]: Performance: GET /api-docs/swagger-ui.css - 8ms
+2024-12-15 00:10:19 [info]: GET /api-docs/swagger-ui-bundle.js 304 8ms
+2024-12-15 00:10:19 [info]: Performance: GET /api-docs/swagger-ui-bundle.js - 10ms
+2024-12-15 00:10:19 [info]: GET /api-docs/swagger-ui-standalone-preset.js 304 1ms
+2024-12-15 00:10:19 [info]: Performance: GET /api-docs/swagger-ui-standalone-preset.js - 3ms
+2024-12-15 00:10:19 [info]: GET /api-docs/swagger-ui-init.js 200 2ms
+2024-12-15 00:10:19 [info]: Performance: GET /api-docs/swagger-ui-init.js - 6ms
+2024-12-15 00:10:19 [info]: GET /api-docs/favicon-32x32.png 304 1ms
+2024-12-15 00:10:19 [info]: Performance: GET /api-docs/favicon-32x32.png - 2ms
+2024-12-15 00:16:05 [info]: GET /api-docs/ 304 16ms
+2024-12-15 00:16:05 [info]: Performance: GET /api-docs/ - 36ms
+2024-12-15 00:16:05 [info]: GET /api-docs/swagger-ui-bundle.js 304 7ms
+2024-12-15 00:16:05 [info]: Performance: GET /api-docs/swagger-ui-bundle.js - 11ms
+2024-12-15 00:16:05 [info]: GET /api-docs/swagger-ui.css 304 11ms
+2024-12-15 00:16:05 [info]: Performance: GET /api-docs/swagger-ui.css - 13ms
+2024-12-15 00:16:05 [info]: GET /api-docs/swagger-ui-standalone-preset.js 304 1ms
+2024-12-15 00:16:05 [info]: Performance: GET /api-docs/swagger-ui-standalone-preset.js - 3ms
+2024-12-15 00:16:05 [info]: GET /api-docs/swagger-ui-init.js 200 2ms
+2024-12-15 00:16:05 [info]: Performance: GET /api-docs/swagger-ui-init.js - 8ms
+2024-12-15 00:16:05 [info]: GET /api-docs/favicon-32x32.png 304 1ms
+2024-12-15 00:16:05 [info]: Performance: GET /api-docs/favicon-32x32.png - 4ms
+2024-12-15 00:36:29 [info]: GET /api-docs/ 304 19ms
+2024-12-15 00:36:29 [info]: Performance: GET /api-docs/ - 38ms
+2024-12-15 00:36:29 [info]: GET /api-docs/swagger-ui.css 304 8ms
+2024-12-15 00:36:29 [info]: Performance: GET /api-docs/swagger-ui.css - 12ms
+2024-12-15 00:36:29 [info]: GET /api-docs/swagger-ui-bundle.js 304 10ms
+2024-12-15 00:36:29 [info]: Performance: GET /api-docs/swagger-ui-bundle.js - 13ms
+2024-12-15 00:36:29 [info]: GET /api-docs/swagger-ui-standalone-preset.js 304 1ms
+2024-12-15 00:36:29 [info]: Performance: GET /api-docs/swagger-ui-standalone-preset.js - 3ms
+2024-12-15 00:36:29 [info]: GET /api-docs/swagger-ui-init.js 200 9ms
+2024-12-15 00:36:29 [info]: Performance: GET /api-docs/swagger-ui-init.js - 15ms
+2024-12-15 00:36:29 [info]: GET /api-docs/favicon-32x32.png 304 1ms
+2024-12-15 00:36:29 [info]: Performance: GET /api-docs/favicon-32x32.png - 3ms
+2024-12-15 00:37:06 [info]: GET /api-docs/ 304 14ms
+2024-12-15 00:37:06 [info]: Performance: GET /api-docs/ - 36ms
+2024-12-15 00:37:06 [info]: GET /api-docs/swagger-ui.css 304 4ms
+2024-12-15 00:37:06 [info]: Performance: GET /api-docs/swagger-ui.css - 8ms
+2024-12-15 00:37:06 [info]: GET /api-docs/swagger-ui-bundle.js 304 2ms
+2024-12-15 00:37:06 [info]: Performance: GET /api-docs/swagger-ui-bundle.js - 4ms
+2024-12-15 00:37:06 [info]: GET /api-docs/swagger-ui-init.js 200 2ms
+2024-12-15 00:37:06 [info]: Performance: GET /api-docs/swagger-ui-init.js - 7ms
+2024-12-15 00:37:06 [info]: GET /api-docs/swagger-ui-standalone-preset.js 304 11ms
+2024-12-15 00:37:06 [info]: Performance: GET /api-docs/swagger-ui-standalone-preset.js - 13ms
+2024-12-15 00:37:06 [info]: GET /api-docs/favicon-32x32.png 304 1ms
+2024-12-15 00:37:06 [info]: Performance: GET /api-docs/favicon-32x32.png - 4ms
+2024-12-15 00:38:00 [info]: GET /api-docs/ 304 18ms
+2024-12-15 00:38:00 [info]: Performance: GET /api-docs/ - 37ms
+2024-12-15 00:38:00 [info]: GET /api-docs/swagger-ui.css 304 5ms
+2024-12-15 00:38:00 [info]: Performance: GET /api-docs/swagger-ui.css - 8ms
+2024-12-15 00:38:00 [info]: GET /api-docs/swagger-ui-bundle.js 304 7ms
+2024-12-15 00:38:00 [info]: Performance: GET /api-docs/swagger-ui-bundle.js - 8ms
+2024-12-15 00:38:00 [info]: GET /api-docs/swagger-ui-standalone-preset.js 304 1ms
+2024-12-15 00:38:00 [info]: Performance: GET /api-docs/swagger-ui-standalone-preset.js - 3ms
+2024-12-15 00:38:00 [info]: GET /api-docs/swagger-ui-init.js 200 3ms
+2024-12-15 00:38:00 [info]: Performance: GET /api-docs/swagger-ui-init.js - 8ms
+2024-12-15 00:38:01 [info]: GET /api-docs/favicon-32x32.png 304 2ms
+2024-12-15 00:38:01 [info]: Performance: GET /api-docs/favicon-32x32.png - 5ms
+2024-12-15 00:47:02 [info]: POST /auth/register 201 81ms
+2024-12-15 00:47:02 [info]: Performance: POST /auth/register - 82ms
+2024-12-15 00:47:59 [info]: POST /auth/login 200 111ms
+2024-12-15 00:47:59 [info]: Performance: POST /auth/login - 119ms
+2024-12-15 00:48:54 [error]: middlewareError
+2024-12-15 00:48:54 [info]: DELETE /auth/user/5 500 82ms
+2024-12-15 00:48:54 [info]: Performance: DELETE /auth/user/5 - 83ms
+2024-12-15 00:54:09 [info]: POST /auth/login 200 85ms
+2024-12-15 00:54:09 [info]: Performance: POST /auth/login - 89ms
+2024-12-15 00:54:37 [error]: middlewareError
+2024-12-15 00:54:37 [info]: DELETE /auth/user/5 500 64ms
+2024-12-15 00:54:37 [info]: Performance: DELETE /auth/user/5 - 66ms
+2024-12-15 00:56:05 [info]: DELETE /auth/user/5 200 69ms
+2024-12-15 00:56:05 [info]: Performance: DELETE /auth/user/5 - 84ms
+2024-12-15 00:56:16 [info]: GET /api-docs/ 304 9ms
+2024-12-15 00:56:16 [info]: Performance: GET /api-docs/ - 14ms
+2024-12-15 00:56:16 [info]: GET /api-docs/swagger-ui.css 304 16ms
+2024-12-15 00:56:16 [info]: Performance: GET /api-docs/swagger-ui.css - 18ms
+2024-12-15 00:56:16 [info]: GET /api-docs/swagger-ui-bundle.js 304 4ms
+2024-12-15 00:56:16 [info]: Performance: GET /api-docs/swagger-ui-bundle.js - 6ms
+2024-12-15 00:56:16 [info]: GET /api-docs/swagger-ui-standalone-preset.js 304 2ms
+2024-12-15 00:56:16 [info]: Performance: GET /api-docs/swagger-ui-standalone-preset.js - 5ms
+2024-12-15 00:56:16 [info]: GET /api-docs/swagger-ui-init.js 304 2ms
+2024-12-15 00:56:17 [info]: Performance: GET /api-docs/swagger-ui-init.js - 5ms
+2024-12-15 00:56:17 [info]: GET /api-docs/favicon-32x32.png 304 1ms
+2024-12-15 00:56:17 [info]: Performance: GET /api-docs/favicon-32x32.png - 3ms
+2024-12-15 00:56:24 [info]: POST /auth/register 201 85ms
+2024-12-15 00:56:24 [info]: Performance: POST /auth/register - 89ms
+2024-12-15 00:56:35 [info]: POST /auth/login 200 60ms
+2024-12-15 00:56:35 [info]: Performance: POST /auth/login - 63ms
+2024-12-15 00:57:38 [info]: POST /jobs 201 116ms
+2024-12-15 00:57:38 [info]: Performance: POST /jobs - 117ms
+2024-12-15 00:57:54 [info]: DELETE /auth/user/5 403 6ms
+2024-12-15 00:57:54 [info]: Performance: DELETE /auth/user/5 - 10ms
+2024-12-15 00:58:09 [info]: DELETE /auth/user/7 200 44ms
+2024-12-15 00:58:09 [info]: Performance: DELETE /auth/user/7 - 47ms
+2024-12-15 00:58:21 [info]: POST /auth/register 201 45ms
+2024-12-15 00:58:21 [info]: Performance: POST /auth/register - 47ms
+2024-12-15 00:58:33 [info]: POST /auth/login 200 58ms
+2024-12-15 00:58:33 [info]: Performance: POST /auth/login - 60ms
+2024-12-15 00:59:02 [info]: POST /companyreview 201 50ms
+2024-12-15 00:59:02 [info]: Performance: POST /companyreview - 54ms
+2024-12-15 00:59:32 [info]: POST /applications 201 56ms
+2024-12-15 00:59:32 [info]: Performance: POST /applications - 58ms
+2024-12-15 00:59:57 [info]: DELETE /auth/user/8 200 40ms
+2024-12-15 00:59:57 [info]: Performance: DELETE /auth/user/8 - 44ms
+2024-12-15 02:04:08 [info]: POST /auth/register 201 61ms
+2024-12-15 02:04:08 [info]: Performance: POST /auth/register - 65ms
+2024-12-15 02:04:32 [info]: POST /auth/login 200 56ms
+2024-12-15 02:04:32 [info]: Performance: POST /auth/login - 58ms
+2024-12-15 02:04:34 [info]: POST /auth/login 200 36ms
+2024-12-15 02:04:34 [info]: Performance: POST /auth/login - 37ms
+2024-12-15 02:04:53 [info]: POST /bookmarks 201 35ms
+2024-12-15 02:04:53 [info]: Performance: POST /bookmarks - 37ms
+2024-12-15 02:05:08 [info]: POST /companyreview 201 44ms
+2024-12-15 02:05:08 [info]: Performance: POST /companyreview - 47ms
+2024-12-15 02:05:16 [info]: POST /jobs 201 60ms
+2024-12-15 02:05:16 [info]: Performance: POST /jobs - 61ms
+2024-12-15 02:06:32 [info]: POST /applications 201 51ms
+2024-12-15 02:06:32 [info]: Performance: POST /applications - 54ms
+2024-12-15 02:07:09 [info]: DELETE /auth/user/9 200 53ms
+2024-12-15 02:07:09 [info]: Performance: DELETE /auth/user/9 - 55ms
+2024-12-15 02:08:05 [info]: GET /api-docs/ 304 13ms
+2024-12-15 02:08:05 [info]: Performance: GET /api-docs/ - 20ms
+2024-12-15 02:08:05 [info]: GET /api-docs/swagger-ui-bundle.js 304 3ms
+2024-12-15 02:08:05 [info]: Performance: GET /api-docs/swagger-ui-bundle.js - 5ms
+2024-12-15 02:08:05 [info]: GET /api-docs/swagger-ui.css 304 4ms
+2024-12-15 02:08:05 [info]: Performance: GET /api-docs/swagger-ui.css - 6ms
+2024-12-15 02:08:05 [info]: GET /api-docs/swagger-ui-standalone-preset.js 304 2ms
+2024-12-15 02:08:05 [info]: Performance: GET /api-docs/swagger-ui-standalone-preset.js - 4ms
+2024-12-15 02:08:05 [info]: GET /api-docs/swagger-ui-init.js 304 2ms
+2024-12-15 02:08:05 [info]: Performance: GET /api-docs/swagger-ui-init.js - 4ms
+2024-12-15 02:08:06 [info]: GET /api-docs/favicon-32x32.png 304 2ms
+2024-12-15 02:08:06 [info]: Performance: GET /api-docs/favicon-32x32.png - 4ms
+2024-12-15 02:23:28 [info]: GET /api-docs/ 304 15ms
+2024-12-15 02:23:28 [info]: Performance: GET /api-docs/ - 36ms
+2024-12-15 02:23:28 [info]: GET /api-docs/swagger-ui.css 304 7ms
+2024-12-15 02:23:28 [info]: Performance: GET /api-docs/swagger-ui.css - 11ms
+2024-12-15 02:23:28 [info]: GET /api-docs/swagger-ui-bundle.js 304 10ms
+2024-12-15 02:23:28 [info]: Performance: GET /api-docs/swagger-ui-bundle.js - 12ms
+2024-12-15 02:23:28 [info]: GET /api-docs/swagger-ui-init.js 200 2ms
+2024-12-15 02:23:28 [info]: Performance: GET /api-docs/swagger-ui-init.js - 6ms
+2024-12-15 02:23:28 [info]: GET /api-docs/swagger-ui-standalone-preset.js 304 9ms
+2024-12-15 02:23:28 [info]: Performance: GET /api-docs/swagger-ui-standalone-preset.js - 12ms
+2024-12-15 02:23:29 [info]: GET /api-docs/favicon-32x32.png 304 1ms
+2024-12-15 02:23:29 [info]: Performance: GET /api-docs/favicon-32x32.png - 3ms
+2024-12-15 02:33:44 [info]: GET /api-docs/ 304 19ms
+2024-12-15 02:33:44 [info]: Performance: GET /api-docs/ - 46ms
+2024-12-15 02:33:44 [info]: GET /api-docs/swagger-ui.css 304 5ms
+2024-12-15 02:33:44 [info]: Performance: GET /api-docs/swagger-ui.css - 7ms
+2024-12-15 02:33:44 [info]: GET /api-docs/swagger-ui-bundle.js 304 7ms
+2024-12-15 02:33:44 [info]: Performance: GET /api-docs/swagger-ui-bundle.js - 8ms
+2024-12-15 02:33:44 [info]: GET /api-docs/swagger-ui-standalone-preset.js 304 1ms
+2024-12-15 02:33:44 [info]: Performance: GET /api-docs/swagger-ui-standalone-preset.js - 2ms
+2024-12-15 02:33:44 [info]: GET /api-docs/swagger-ui-init.js 200 1ms
+2024-12-15 02:33:44 [info]: Performance: GET /api-docs/swagger-ui-init.js - 4ms
+2024-12-15 02:33:45 [info]: GET /api-docs/favicon-32x32.png 304 1ms
+2024-12-15 02:33:45 [info]: Performance: GET /api-docs/favicon-32x32.png - 3ms
+2024-12-15 02:35:40 [info]: GET /api-docs/ 304 15ms
+2024-12-15 02:35:40 [info]: Performance: GET /api-docs/ - 36ms
+2024-12-15 02:35:40 [info]: GET /api-docs/swagger-ui.css 304 7ms
+2024-12-15 02:35:40 [info]: Performance: GET /api-docs/swagger-ui.css - 11ms
+2024-12-15 02:35:40 [info]: GET /api-docs/swagger-ui-bundle.js 304 9ms
+2024-12-15 02:35:40 [info]: Performance: GET /api-docs/swagger-ui-bundle.js - 12ms
+2024-12-15 02:35:40 [info]: GET /api-docs/swagger-ui-standalone-preset.js 304 2ms
+2024-12-15 02:35:40 [info]: Performance: GET /api-docs/swagger-ui-standalone-preset.js - 4ms
+2024-12-15 02:35:40 [info]: GET /api-docs/swagger-ui-init.js 200 1ms
+2024-12-15 02:35:40 [info]: Performance: GET /api-docs/swagger-ui-init.js - 6ms
+2024-12-15 02:35:40 [info]: GET /api-docs/favicon-32x32.png 304 5ms
+2024-12-15 02:35:40 [info]: Performance: GET /api-docs/favicon-32x32.png - 8ms
+2024-12-15 02:41:36 [info]: GET /api-docs/ 304 14ms
+2024-12-15 02:41:36 [info]: Performance: GET /api-docs/ - 34ms
+2024-12-15 02:41:36 [info]: GET /api-docs/swagger-ui-bundle.js 304 8ms
+2024-12-15 02:41:36 [info]: Performance: GET /api-docs/swagger-ui-bundle.js - 11ms
+2024-12-15 02:41:36 [info]: GET /api-docs/swagger-ui.css 304 11ms
+2024-12-15 02:41:36 [info]: Performance: GET /api-docs/swagger-ui.css - 13ms
+2024-12-15 02:41:36 [info]: GET /api-docs/swagger-ui-standalone-preset.js 304 2ms
+2024-12-15 02:41:36 [info]: Performance: GET /api-docs/swagger-ui-standalone-preset.js - 4ms
+2024-12-15 02:41:36 [info]: GET /api-docs/swagger-ui-init.js 200 2ms
+2024-12-15 02:41:36 [info]: Performance: GET /api-docs/swagger-ui-init.js - 7ms
+2024-12-15 02:41:36 [info]: GET /api-docs/favicon-32x32.png 304 1ms
+2024-12-15 02:41:36 [info]: Performance: GET /api-docs/favicon-32x32.png - 3ms
+2024-12-15 02:47:27 [info]: GET /api-docs/ 304 16ms
+2024-12-15 02:47:27 [info]: Performance: GET /api-docs/ - 36ms
+2024-12-15 02:47:27 [info]: GET /api-docs/swagger-ui.css 304 6ms
+2024-12-15 02:47:27 [info]: Performance: GET /api-docs/swagger-ui.css - 9ms
+2024-12-15 02:47:27 [info]: GET /api-docs/swagger-ui-bundle.js 304 8ms
+2024-12-15 02:47:27 [info]: Performance: GET /api-docs/swagger-ui-bundle.js - 10ms
+2024-12-15 02:47:27 [info]: GET /api-docs/swagger-ui-standalone-preset.js 304 1ms
+2024-12-15 02:47:27 [info]: Performance: GET /api-docs/swagger-ui-standalone-preset.js - 3ms
+2024-12-15 02:47:27 [info]: GET /api-docs/swagger-ui-init.js 200 2ms
+2024-12-15 02:47:27 [info]: Performance: GET /api-docs/swagger-ui-init.js - 5ms
+2024-12-15 02:47:28 [info]: GET /api-docs/favicon-32x32.png 304 1ms
+2024-12-15 02:47:28 [info]: Performance: GET /api-docs/favicon-32x32.png - 4ms
+2024-12-15 02:54:40 [info]: GET /api-docs/ 304 15ms
+2024-12-15 02:54:40 [info]: Performance: GET /api-docs/ - 34ms
+2024-12-15 02:54:40 [info]: GET /api-docs/swagger-ui.css 304 7ms
+2024-12-15 02:54:40 [info]: Performance: GET /api-docs/swagger-ui.css - 10ms
+2024-12-15 02:54:40 [info]: GET /api-docs/swagger-ui-bundle.js 304 10ms
+2024-12-15 02:54:40 [info]: Performance: GET /api-docs/swagger-ui-bundle.js - 12ms
+2024-12-15 02:54:40 [info]: GET /api-docs/swagger-ui-standalone-preset.js 304 1ms
+2024-12-15 02:54:40 [info]: Performance: GET /api-docs/swagger-ui-standalone-preset.js - 3ms
+2024-12-15 02:54:40 [info]: GET /api-docs/swagger-ui-init.js 200 2ms
+2024-12-15 02:54:40 [info]: Performance: GET /api-docs/swagger-ui-init.js - 6ms
+2024-12-15 02:54:40 [info]: GET /api-docs/favicon-32x32.png 304 1ms
+2024-12-15 02:54:40 [info]: Performance: GET /api-docs/favicon-32x32.png - 4ms
+2024-12-15 11:26:29 [info]: GET / 404 11ms
+2024-12-15 11:26:29 [info]: Performance: GET / - 34ms
+2024-12-15 11:26:35 [info]: GET /api-docs 301 6ms
+2024-12-15 11:26:35 [info]: Performance: GET /api-docs - 10ms
+2024-12-15 11:26:35 [info]: GET /api-docs/ 200 3ms
+2024-12-15 11:26:35 [info]: Performance: GET /api-docs/ - 5ms
+2024-12-15 11:26:35 [info]: GET /api-docs/swagger-ui.css 200 15ms
+2024-12-15 11:26:35 [info]: Performance: GET /api-docs/swagger-ui.css - 17ms
+2024-12-15 11:26:35 [info]: GET /api-docs/swagger-ui-bundle.js 200 31ms
+2024-12-15 11:26:35 [info]: Performance: GET /api-docs/swagger-ui-bundle.js - 34ms
+2024-12-15 11:26:35 [info]: GET /api-docs/swagger-ui-standalone-preset.js 200 8ms
+2024-12-15 11:26:35 [info]: Performance: GET /api-docs/swagger-ui-standalone-preset.js - 11ms
+2024-12-15 11:26:35 [info]: GET /api-docs/swagger-ui-init.js 200 2ms
+2024-12-15 11:26:35 [info]: Performance: GET /api-docs/swagger-ui-init.js - 4ms
+2024-12-15 11:26:35 [info]: GET /api-docs/favicon-32x32.png 200 3ms
+2024-12-15 11:26:35 [info]: Performance: GET /api-docs/favicon-32x32.png - 7ms
+2024-12-15 11:35:48 [info]: GET /api-docs/ 200 14ms
+2024-12-15 11:35:48 [info]: Performance: GET /api-docs/ - 40ms
+2024-12-15 11:35:48 [info]: GET /api-docs/swagger-ui-init.js 200 2ms
+2024-12-15 11:35:48 [info]: Performance: GET /api-docs/swagger-ui-init.js - 6ms
+2024-12-15 11:35:48 [info]: GET /api-docs/swagger-ui.css 200 35ms
+2024-12-15 11:35:48 [info]: Performance: GET /api-docs/swagger-ui.css - 38ms
+2024-12-15 11:35:48 [info]: GET /api-docs/swagger-ui-standalone-preset.js 200 55ms
+2024-12-15 11:35:48 [info]: Performance: GET /api-docs/swagger-ui-standalone-preset.js - 58ms
+2024-12-15 11:35:48 [info]: GET /api-docs/swagger-ui-bundle.js 200 126ms
+2024-12-15 11:35:48 [info]: Performance: GET /api-docs/swagger-ui-bundle.js - 128ms
+2024-12-15 11:35:48 [info]: GET /api-docs/favicon-32x32.png 200 4ms
+2024-12-15 11:35:48 [info]: Performance: GET /api-docs/favicon-32x32.png - 6ms
+2024-12-15 11:37:06 [info]: GET /api-docs/ 304 19ms
+2024-12-15 11:37:06 [info]: Performance: GET /api-docs/ - 41ms
+2024-12-15 11:37:06 [info]: GET /api-docs/swagger-ui.css 304 5ms
+2024-12-15 11:37:06 [info]: Performance: GET /api-docs/swagger-ui.css - 8ms
+2024-12-15 11:37:06 [info]: GET /api-docs/swagger-ui-bundle.js 304 2ms
+2024-12-15 11:37:06 [info]: Performance: GET /api-docs/swagger-ui-bundle.js - 4ms
+2024-12-15 11:37:06 [info]: GET /api-docs/swagger-ui-standalone-preset.js 304 2ms
+2024-12-15 11:37:06 [info]: Performance: GET /api-docs/swagger-ui-standalone-preset.js - 2ms
+2024-12-15 11:37:06 [info]: GET /api-docs/swagger-ui-init.js 304 2ms
+2024-12-15 11:37:06 [info]: Performance: GET /api-docs/swagger-ui-init.js - 5ms
+2024-12-15 11:37:06 [info]: GET /api-docs/favicon-32x32.png 304 1ms
+2024-12-15 11:37:06 [info]: Performance: GET /api-docs/favicon-32x32.png - 3ms
+2024-12-15 11:37:07 [info]: GET /api-docs/ 304 2ms
+2024-12-15 11:37:07 [info]: Performance: GET /api-docs/ - 4ms
+2024-12-15 11:37:07 [info]: GET /api-docs/swagger-ui.css 304 1ms
+2024-12-15 11:37:07 [info]: Performance: GET /api-docs/swagger-ui.css - 4ms
+2024-12-15 11:37:07 [info]: GET /api-docs/swagger-ui-init.js 304 2ms
+2024-12-15 11:37:07 [info]: Performance: GET /api-docs/swagger-ui-init.js - 5ms
+2024-12-15 11:37:07 [info]: GET /api-docs/swagger-ui-standalone-preset.js 304 10ms
+2024-12-15 11:37:07 [info]: Performance: GET /api-docs/swagger-ui-standalone-preset.js - 12ms
+2024-12-15 11:37:07 [info]: GET /api-docs/swagger-ui-bundle.js 304 5ms
+2024-12-15 11:37:07 [info]: Performance: GET /api-docs/swagger-ui-bundle.js - 7ms
+2024-12-15 11:37:07 [info]: GET /api-docs/favicon-32x32.png 304 1ms
+2024-12-15 11:37:07 [info]: Performance: GET /api-docs/favicon-32x32.png - 3ms
+2024-12-15 11:37:07 [info]: GET /api-docs/ 304 2ms
+2024-12-15 11:37:07 [info]: Performance: GET /api-docs/ - 4ms
+2024-12-15 11:37:07 [info]: GET /api-docs/swagger-ui.css 304 2ms
+2024-12-15 11:37:07 [info]: Performance: GET /api-docs/swagger-ui.css - 4ms
+2024-12-15 11:37:07 [info]: GET /api-docs/swagger-ui-init.js 304 1ms
+2024-12-15 11:37:07 [info]: Performance: GET /api-docs/swagger-ui-init.js - 4ms
+2024-12-15 11:37:07 [info]: GET /api-docs/swagger-ui-standalone-preset.js 304 8ms
+2024-12-15 11:37:07 [info]: Performance: GET /api-docs/swagger-ui-standalone-preset.js - 10ms
+2024-12-15 11:37:07 [info]: GET /api-docs/swagger-ui-bundle.js 304 8ms
+2024-12-15 11:37:07 [info]: Performance: GET /api-docs/swagger-ui-bundle.js - 10ms
+2024-12-15 11:37:07 [info]: GET /api-docs/favicon-32x32.png 304 2ms
+2024-12-15 11:37:07 [info]: Performance: GET /api-docs/favicon-32x32.png - 4ms
+2024-12-15 11:37:07 [info]: GET /api-docs/ 304 2ms
+2024-12-15 11:37:07 [info]: Performance: GET /api-docs/ - 4ms
+2024-12-15 11:37:07 [info]: GET /api-docs/swagger-ui.css 304 1ms
+2024-12-15 11:37:07 [info]: Performance: GET /api-docs/swagger-ui.css - 3ms
+2024-12-15 11:37:07 [info]: GET /api-docs/swagger-ui-init.js 304 2ms
+2024-12-15 11:37:07 [info]: Performance: GET /api-docs/swagger-ui-init.js - 4ms
+2024-12-15 11:37:07 [info]: GET /api-docs/swagger-ui-bundle.js 304 7ms
+2024-12-15 11:37:07 [info]: Performance: GET /api-docs/swagger-ui-bundle.js - 8ms
+2024-12-15 11:37:07 [info]: GET /api-docs/swagger-ui-standalone-preset.js 304 4ms
+2024-12-15 11:37:07 [info]: Performance: GET /api-docs/swagger-ui-standalone-preset.js - 5ms
+2024-12-15 11:37:07 [info]: GET /api-docs/ 304 2ms
+2024-12-15 11:37:07 [info]: Performance: GET /api-docs/ - 4ms
+2024-12-15 11:37:07 [info]: GET /api-docs/swagger-ui.css 304 2ms
+2024-12-15 11:37:07 [info]: Performance: GET /api-docs/swagger-ui.css - 2ms
+2024-12-15 11:37:07 [info]: GET /api-docs/swagger-ui-init.js 304 2ms
+2024-12-15 11:37:07 [info]: Performance: GET /api-docs/swagger-ui-init.js - 4ms
+2024-12-15 11:37:07 [info]: GET /api-docs/swagger-ui-standalone-preset.js 304 1ms
+2024-12-15 11:37:07 [info]: Performance: GET /api-docs/swagger-ui-standalone-preset.js - 2ms
+2024-12-15 11:37:07 [info]: GET /api-docs/swagger-ui-bundle.js 304 2ms
+2024-12-15 11:37:07 [info]: Performance: GET /api-docs/swagger-ui-bundle.js - 3ms
+2024-12-15 11:37:08 [info]: GET /api-docs/favicon-32x32.png 304 1ms
+2024-12-15 11:37:08 [info]: Performance: GET /api-docs/favicon-32x32.png - 4ms
+2024-12-15 11:37:08 [info]: GET /api-docs/ 304 2ms
+2024-12-15 11:37:08 [info]: Performance: GET /api-docs/ - 4ms
+2024-12-15 11:37:08 [info]: GET /api-docs/swagger-ui.css 304 2ms
+2024-12-15 11:37:08 [info]: Performance: GET /api-docs/swagger-ui.css - 3ms
+2024-12-15 11:37:08 [info]: GET /api-docs/swagger-ui-init.js 304 1ms
+2024-12-15 11:37:08 [info]: Performance: GET /api-docs/swagger-ui-init.js - 3ms
+2024-12-15 11:37:08 [info]: GET /api-docs/swagger-ui-standalone-preset.js 304 6ms
+2024-12-15 11:37:08 [info]: Performance: GET /api-docs/swagger-ui-standalone-preset.js - 8ms
+2024-12-15 11:37:08 [info]: GET /api-docs/swagger-ui-bundle.js 304 5ms
+2024-12-15 11:37:08 [info]: Performance: GET /api-docs/swagger-ui-bundle.js - 6ms
+2024-12-15 11:37:08 [info]: GET /api-docs/ 304 2ms
+2024-12-15 11:37:08 [info]: Performance: GET /api-docs/ - 3ms
+2024-12-15 11:37:08 [info]: GET /api-docs/swagger-ui.css 304 1ms
+2024-12-15 11:37:08 [info]: Performance: GET /api-docs/swagger-ui.css - 2ms
+2024-12-15 11:37:08 [info]: GET /api-docs/swagger-ui-init.js 304 2ms
+2024-12-15 11:37:08 [info]: Performance: GET /api-docs/swagger-ui-init.js - 3ms
+2024-12-15 11:37:08 [info]: GET /api-docs/swagger-ui-bundle.js 304 6ms
+2024-12-15 11:37:08 [info]: Performance: GET /api-docs/swagger-ui-bundle.js - 7ms
+2024-12-15 11:37:08 [info]: GET /api-docs/swagger-ui-standalone-preset.js 304 7ms
+2024-12-15 11:37:08 [info]: Performance: GET /api-docs/swagger-ui-standalone-preset.js - 8ms
+2024-12-15 11:37:08 [info]: GET /api-docs/favicon-32x32.png 304 1ms
+2024-12-15 11:37:08 [info]: Performance: GET /api-docs/favicon-32x32.png - 2ms
+2024-12-15 11:37:08 [info]: GET /api-docs/ 304 2ms
+2024-12-15 11:37:08 [info]: Performance: GET /api-docs/ - 4ms
+2024-12-15 11:37:08 [info]: GET /api-docs/swagger-ui.css 304 1ms
+2024-12-15 11:37:08 [info]: Performance: GET /api-docs/swagger-ui.css - 3ms
+2024-12-15 11:37:08 [info]: GET /api-docs/swagger-ui-init.js 304 2ms
+2024-12-15 11:37:08 [info]: Performance: GET /api-docs/swagger-ui-init.js - 3ms
+2024-12-15 11:37:08 [info]: GET /api-docs/swagger-ui-standalone-preset.js 304 6ms
+2024-12-15 11:37:08 [info]: Performance: GET /api-docs/swagger-ui-standalone-preset.js - 8ms
+2024-12-15 11:37:08 [info]: GET /api-docs/swagger-ui-bundle.js 304 8ms
+2024-12-15 11:37:08 [info]: Performance: GET /api-docs/swagger-ui-bundle.js - 9ms
+2024-12-15 11:37:08 [info]: GET /api-docs/ 304 5ms
+2024-12-15 11:37:08 [info]: Performance: GET /api-docs/ - 7ms
+2024-12-15 11:37:08 [info]: GET /api-docs/swagger-ui.css 304 11ms
+2024-12-15 11:37:08 [info]: Performance: GET /api-docs/swagger-ui.css - 15ms
+2024-12-15 11:37:08 [info]: GET /api-docs/swagger-ui-init.js 304 2ms
+2024-12-15 11:37:08 [info]: Performance: GET /api-docs/swagger-ui-init.js - 4ms
+2024-12-15 11:37:08 [info]: GET /api-docs/swagger-ui-standalone-preset.js 304 2ms
+2024-12-15 11:37:08 [info]: Performance: GET /api-docs/swagger-ui-standalone-preset.js - 3ms
+2024-12-15 11:37:08 [info]: GET /api-docs/swagger-ui-bundle.js 304 3ms
+2024-12-15 11:37:08 [info]: Performance: GET /api-docs/swagger-ui-bundle.js - 5ms
+2024-12-15 11:37:08 [info]: GET /api-docs/favicon-32x32.png 304 1ms
+2024-12-15 11:37:08 [info]: Performance: GET /api-docs/favicon-32x32.png - 3ms
+2024-12-15 11:37:08 [info]: GET /api-docs/ 304 2ms
+2024-12-15 11:37:08 [info]: Performance: GET /api-docs/ - 4ms
+2024-12-15 11:37:08 [info]: GET /api-docs/swagger-ui.css 304 1ms
+2024-12-15 11:37:08 [info]: Performance: GET /api-docs/swagger-ui.css - 3ms
+2024-12-15 11:37:08 [info]: GET /api-docs/swagger-ui-init.js 304 2ms
+2024-12-15 11:37:08 [info]: Performance: GET /api-docs/swagger-ui-init.js - 4ms
+2024-12-15 11:37:08 [info]: GET /api-docs/swagger-ui-bundle.js 304 3ms
+2024-12-15 11:37:08 [info]: Performance: GET /api-docs/swagger-ui-bundle.js - 4ms
+2024-12-15 11:37:08 [info]: GET /api-docs/swagger-ui-standalone-preset.js 304 9ms
+2024-12-15 11:37:08 [info]: Performance: GET /api-docs/swagger-ui-standalone-preset.js - 11ms
+2024-12-15 11:37:08 [info]: GET /api-docs/favicon-16x16.png 200 18ms
+2024-12-15 11:37:08 [info]: Performance: GET /api-docs/favicon-16x16.png - 20ms
+2024-12-15 11:37:08 [info]: GET /api-docs/favicon-32x32.png 304 1ms
+2024-12-15 11:37:08 [info]: Performance: GET /api-docs/favicon-32x32.png - 3ms
+2024-12-15 11:37:08 [info]: GET /api-docs/ 304 2ms
+2024-12-15 11:37:08 [info]: Performance: GET /api-docs/ - 2ms
+2024-12-15 11:37:09 [info]: GET /api-docs/swagger-ui.css 304 1ms
+2024-12-15 11:37:09 [info]: Performance: GET /api-docs/swagger-ui.css - 2ms
+2024-12-15 11:37:09 [info]: GET /api-docs/swagger-ui-init.js 304 1ms
+2024-12-15 11:37:09 [info]: Performance: GET /api-docs/swagger-ui-init.js - 2ms
+2024-12-15 11:37:09 [info]: GET /api-docs/swagger-ui-standalone-preset.js 304 5ms
+2024-12-15 11:37:09 [info]: Performance: GET /api-docs/swagger-ui-standalone-preset.js - 7ms
+2024-12-15 11:37:09 [info]: GET /api-docs/swagger-ui-bundle.js 304 7ms
+2024-12-15 11:37:09 [info]: Performance: GET /api-docs/swagger-ui-bundle.js - 8ms
+2024-12-15 11:37:09 [info]: GET /api-docs/ 304 1ms
+2024-12-15 11:37:09 [info]: Performance: GET /api-docs/ - 3ms
+2024-12-15 11:37:09 [info]: GET /api-docs/swagger-ui.css 304 1ms
+2024-12-15 11:37:09 [info]: Performance: GET /api-docs/swagger-ui.css - 3ms
+2024-12-15 11:37:09 [info]: GET /api-docs/swagger-ui-init.js 304 2ms
+2024-12-15 11:37:09 [info]: Performance: GET /api-docs/swagger-ui-init.js - 3ms
+2024-12-15 11:37:09 [info]: GET /api-docs/swagger-ui-bundle.js 304 6ms
+2024-12-15 11:37:09 [info]: Performance: GET /api-docs/swagger-ui-bundle.js - 8ms
+2024-12-15 11:37:09 [info]: GET /api-docs/swagger-ui-standalone-preset.js 304 4ms
+2024-12-15 11:37:09 [info]: Performance: GET /api-docs/swagger-ui-standalone-preset.js - 4ms
+2024-12-15 11:37:09 [info]: GET /api-docs/favicon-32x32.png 304 1ms
+2024-12-15 11:37:09 [info]: Performance: GET /api-docs/favicon-32x32.png - 3ms
+2024-12-15 11:37:09 [info]: GET /api-docs/ 304 1ms
+2024-12-15 11:37:09 [info]: Performance: GET /api-docs/ - 3ms
+2024-12-15 11:37:09 [info]: GET /api-docs/swagger-ui.css 304 2ms
+2024-12-15 11:37:09 [info]: Performance: GET /api-docs/swagger-ui.css - 3ms
+2024-12-15 11:37:09 [info]: GET /api-docs/swagger-ui-standalone-preset.js 304 2ms
+2024-12-15 11:37:09 [info]: Performance: GET /api-docs/swagger-ui-standalone-preset.js - 3ms
+2024-12-15 11:37:09 [info]: GET /api-docs/swagger-ui-bundle.js 304 3ms
+2024-12-15 11:37:09 [info]: Performance: GET /api-docs/swagger-ui-bundle.js - 4ms
+2024-12-15 11:37:09 [info]: GET /api-docs/swagger-ui-init.js 304 1ms
+2024-12-15 11:37:09 [info]: Performance: GET /api-docs/swagger-ui-init.js - 2ms
+2024-12-15 11:37:11 [info]: GET /api-docs/ 304 2ms
+2024-12-15 11:37:11 [info]: Performance: GET /api-docs/ - 4ms
+2024-12-15 11:37:11 [info]: GET /api-docs/swagger-ui-init.js 304 2ms
+2024-12-15 11:37:11 [info]: Performance: GET /api-docs/swagger-ui-init.js - 4ms
+2024-12-15 11:37:11 [info]: GET /api-docs/swagger-ui.css 304 8ms
+2024-12-15 11:37:11 [info]: Performance: GET /api-docs/swagger-ui.css - 10ms
+2024-12-15 11:37:11 [info]: GET /api-docs/swagger-ui-bundle.js 304 10ms
+2024-12-15 11:37:11 [info]: Performance: GET /api-docs/swagger-ui-bundle.js - 12ms
+2024-12-15 11:37:11 [info]: GET /api-docs/swagger-ui-standalone-preset.js 304 12ms
+2024-12-15 11:37:11 [info]: Performance: GET /api-docs/swagger-ui-standalone-preset.js - 13ms
+2024-12-15 11:55:32 [info]: GET /api-docs/ 304 15ms
+2024-12-15 11:55:32 [info]: Performance: GET /api-docs/ - 36ms
+2024-12-15 11:55:32 [info]: GET /api-docs/swagger-ui.css 304 5ms
+2024-12-15 11:55:32 [info]: Performance: GET /api-docs/swagger-ui.css - 9ms
+2024-12-15 11:55:32 [info]: GET /api-docs/swagger-ui-bundle.js 304 3ms
+2024-12-15 11:55:32 [info]: Performance: GET /api-docs/swagger-ui-bundle.js - 5ms
+2024-12-15 11:55:32 [info]: GET /api-docs/swagger-ui-standalone-preset.js 304 1ms
+2024-12-15 11:55:32 [info]: Performance: GET /api-docs/swagger-ui-standalone-preset.js - 3ms
+2024-12-15 11:55:32 [info]: GET /api-docs/swagger-ui-init.js 304 2ms
+2024-12-15 11:55:32 [info]: Performance: GET /api-docs/swagger-ui-init.js - 5ms
+2024-12-15 11:55:32 [info]: GET /api-docs/favicon-32x32.png 304 1ms
+2024-12-15 11:55:32 [info]: Performance: GET /api-docs/favicon-32x32.png - 3ms
+2024-12-15 11:58:53 [info]: GET /api-docs/ 304 14ms
+2024-12-15 11:58:53 [info]: Performance: GET /api-docs/ - 36ms
+2024-12-15 11:58:53 [info]: GET /api-docs/swagger-ui.css 304 7ms
+2024-12-15 11:58:53 [info]: Performance: GET /api-docs/swagger-ui.css - 11ms
+2024-12-15 11:58:53 [info]: GET /api-docs/swagger-ui-bundle.js 304 2ms
+2024-12-15 11:58:53 [info]: Performance: GET /api-docs/swagger-ui-bundle.js - 5ms
+2024-12-15 11:58:53 [info]: GET /api-docs/swagger-ui-standalone-preset.js 304 1ms
+2024-12-15 11:58:53 [info]: Performance: GET /api-docs/swagger-ui-standalone-preset.js - 4ms
+2024-12-15 11:58:53 [info]: GET /api-docs/swagger-ui-init.js 304 2ms
+2024-12-15 11:58:53 [info]: Performance: GET /api-docs/swagger-ui-init.js - 4ms
+2024-12-15 11:58:53 [info]: GET /api-docs/favicon-32x32.png 304 2ms
+2024-12-15 11:58:53 [info]: Performance: GET /api-docs/favicon-32x32.png - 3ms
+2024-12-15 11:58:59 [info]: GET /api-docs/ 304 2ms
+2024-12-15 11:58:59 [info]: Performance: GET /api-docs/ - 4ms
+2024-12-15 11:58:59 [info]: GET /api-docs/swagger-ui.css 304 4ms
+2024-12-15 11:58:59 [info]: Performance: GET /api-docs/swagger-ui.css - 7ms
+2024-12-15 11:58:59 [info]: GET /api-docs/swagger-ui-bundle.js 304 3ms
+2024-12-15 11:58:59 [info]: Performance: GET /api-docs/swagger-ui-bundle.js - 5ms
+2024-12-15 11:58:59 [info]: GET /api-docs/swagger-ui-standalone-preset.js 304 5ms
+2024-12-15 11:58:59 [info]: Performance: GET /api-docs/swagger-ui-standalone-preset.js - 7ms
+2024-12-15 11:58:59 [info]: GET /api-docs/swagger-ui-init.js 304 2ms
+2024-12-15 11:58:59 [info]: Performance: GET /api-docs/swagger-ui-init.js - 4ms
+2024-12-15 11:58:59 [info]: GET /api-docs/favicon-32x32.png 304 2ms
+2024-12-15 11:58:59 [info]: Performance: GET /api-docs/favicon-32x32.png - 5ms
+2024-12-15 11:59:49 [info]: GET /api-docs/ 304 16ms
+2024-12-15 11:59:49 [info]: Performance: GET /api-docs/ - 38ms
+2024-12-15 11:59:49 [info]: GET /api-docs/swagger-ui.css 304 5ms
+2024-12-15 11:59:49 [info]: Performance: GET /api-docs/swagger-ui.css - 8ms
+2024-12-15 11:59:49 [info]: GET /api-docs/swagger-ui-bundle.js 304 1ms
+2024-12-15 11:59:49 [info]: Performance: GET /api-docs/swagger-ui-bundle.js - 3ms
+2024-12-15 11:59:49 [info]: GET /api-docs/swagger-ui-init.js 304 2ms
+2024-12-15 11:59:49 [info]: Performance: GET /api-docs/swagger-ui-init.js - 5ms
+2024-12-15 11:59:49 [info]: GET /api-docs/swagger-ui-standalone-preset.js 304 1ms
+2024-12-15 11:59:49 [info]: Performance: GET /api-docs/swagger-ui-standalone-preset.js - 5ms
+2024-12-15 11:59:49 [info]: GET /api-docs/favicon-32x32.png 304 1ms
+2024-12-15 11:59:49 [info]: Performance: GET /api-docs/favicon-32x32.png - 3ms
+2024-12-15 12:01:21 [info]: GET /api-docs/ 304 8ms
+2024-12-15 12:01:21 [info]: Performance: GET /api-docs/ - 14ms
+2024-12-15 12:01:21 [info]: GET /api-docs/swagger-ui.css 304 2ms
+2024-12-15 12:01:21 [info]: Performance: GET /api-docs/swagger-ui.css - 5ms
+2024-12-15 12:01:21 [info]: GET /api-docs/swagger-ui-bundle.js 304 4ms
+2024-12-15 12:01:21 [info]: Performance: GET /api-docs/swagger-ui-bundle.js - 6ms
+2024-12-15 12:01:21 [info]: GET /api-docs/swagger-ui-standalone-preset.js 304 6ms
+2024-12-15 12:01:21 [info]: Performance: GET /api-docs/swagger-ui-standalone-preset.js - 8ms
+2024-12-15 12:01:21 [info]: GET /api-docs/swagger-ui-init.js 304 3ms
+2024-12-15 12:01:21 [info]: Performance: GET /api-docs/swagger-ui-init.js - 4ms
+2024-12-15 12:01:21 [info]: GET /api-docs/favicon-32x32.png 304 1ms
+2024-12-15 12:01:21 [info]: Performance: GET /api-docs/favicon-32x32.png - 3ms
+2024-12-15 12:20:49 [info]: GET /api-docs/ 304 16ms
+2024-12-15 12:20:49 [info]: Performance: GET /api-docs/ - 36ms
+2024-12-15 12:20:49 [info]: GET /api-docs/swagger-ui.css 304 6ms
+2024-12-15 12:20:49 [info]: Performance: GET /api-docs/swagger-ui.css - 9ms
+2024-12-15 12:20:49 [info]: GET /api-docs/swagger-ui-bundle.js 304 8ms
+2024-12-15 12:20:49 [info]: Performance: GET /api-docs/swagger-ui-bundle.js - 10ms
+2024-12-15 12:20:49 [info]: GET /api-docs/swagger-ui-standalone-preset.js 304 1ms
+2024-12-15 12:20:49 [info]: Performance: GET /api-docs/swagger-ui-standalone-preset.js - 2ms
+2024-12-15 12:20:49 [info]: GET /api-docs/swagger-ui-init.js 200 2ms
+2024-12-15 12:20:49 [info]: Performance: GET /api-docs/swagger-ui-init.js - 6ms
+2024-12-15 12:20:49 [info]: GET /api-docs/favicon-32x32.png 304 1ms
+2024-12-15 12:20:49 [info]: Performance: GET /api-docs/favicon-32x32.png - 2ms
+2024-12-15 12:21:26 [info]: GET /api-docs/ 304 14ms
+2024-12-15 12:21:26 [info]: Performance: GET /api-docs/ - 36ms
+2024-12-15 12:21:26 [info]: GET /api-docs/swagger-ui.css 304 8ms
+2024-12-15 12:21:26 [info]: Performance: GET /api-docs/swagger-ui.css - 12ms
+2024-12-15 12:21:26 [info]: GET /api-docs/swagger-ui-bundle.js 304 10ms
+2024-12-15 12:21:26 [info]: Performance: GET /api-docs/swagger-ui-bundle.js - 12ms
+2024-12-15 12:21:26 [info]: GET /api-docs/swagger-ui-init.js 200 2ms
+2024-12-15 12:21:26 [info]: Performance: GET /api-docs/swagger-ui-init.js - 6ms
+2024-12-15 12:21:26 [info]: GET /api-docs/swagger-ui-standalone-preset.js 304 1ms
+2024-12-15 12:21:26 [info]: Performance: GET /api-docs/swagger-ui-standalone-preset.js - 4ms
+2024-12-15 12:21:27 [info]: GET /api-docs/favicon-32x32.png 304 2ms
+2024-12-15 12:21:27 [info]: Performance: GET /api-docs/favicon-32x32.png - 4ms
+2024-12-15 12:21:58 [info]: GET /api-docs/ 304 15ms
+2024-12-15 12:21:58 [info]: Performance: GET /api-docs/ - 41ms
+2024-12-15 12:21:58 [info]: GET /api-docs/swagger-ui.css 304 7ms
+2024-12-15 12:21:58 [info]: Performance: GET /api-docs/swagger-ui.css - 11ms
+2024-12-15 12:21:58 [info]: GET /api-docs/swagger-ui-bundle.js 304 10ms
+2024-12-15 12:21:58 [info]: Performance: GET /api-docs/swagger-ui-bundle.js - 12ms
+2024-12-15 12:21:58 [info]: GET /api-docs/swagger-ui-standalone-preset.js 304 1ms
+2024-12-15 12:21:58 [info]: Performance: GET /api-docs/swagger-ui-standalone-preset.js - 2ms
+2024-12-15 12:21:59 [info]: GET /api-docs/swagger-ui-init.js 200 1ms
+2024-12-15 12:21:59 [info]: Performance: GET /api-docs/swagger-ui-init.js - 5ms
+2024-12-15 12:21:59 [info]: GET /api-docs/favicon-32x32.png 304 1ms
+2024-12-15 12:21:59 [info]: Performance: GET /api-docs/favicon-32x32.png - 3ms
+2024-12-15 12:43:11 [info]: GET /jobs?page=1&limit=20&sortby=views&skill=python 500 165ms
+2024-12-15 12:43:11 [info]: Performance: GET /jobs?page=1&limit=20&sortby=views&skill=python - 188ms
+2024-12-15 12:44:36 [info]: GET /jobs?page=1&limit=20&sortby=views&skill=python 500 162ms
+2024-12-15 12:44:36 [info]: Performance: GET /jobs?page=1&limit=20&sortby=views&skill=python - 186ms
+2024-12-15 12:45:31 [info]: GET /jobs?page=1&limit=20&sortby=views&skill=python 200 138ms
+2024-12-15 12:45:31 [info]: Performance: GET /jobs?page=1&limit=20&sortby=views&skill=python - 160ms
+2024-12-15 12:46:29 [info]: GET /jobs/100 200 184ms
+2024-12-15 12:46:29 [info]: Performance: GET /jobs/100 - 207ms
+2024-12-15 12:46:35 [info]: GET /jobs/400 404 14ms
+2024-12-15 12:46:35 [info]: Performance: GET /jobs/400 - 18ms
+2024-12-15 12:46:40 [info]: GET /jobs/123 200 30ms
+2024-12-15 12:46:40 [info]: Performance: GET /jobs/123 - 33ms
+2024-12-15 12:47:32 [error]: middlewareError
+2024-12-15 12:47:39 [info]: POST /jobs 401 5ms
+2024-12-15 12:47:39 [info]: Performance: POST /jobs - 10ms
+2024-12-15 12:47:41 [info]: POST /jobs 401 2ms
+2024-12-15 12:47:41 [info]: Performance: POST /jobs - 4ms
+2024-12-15 13:26:47 [info]: GET /api-docs/ 304 16ms
+2024-12-15 13:26:47 [info]: Performance: GET /api-docs/ - 37ms
+2024-12-15 13:26:47 [info]: GET /api-docs/swagger-ui.css 304 5ms
+2024-12-15 13:26:47 [info]: Performance: GET /api-docs/swagger-ui.css - 9ms
+2024-12-15 13:26:47 [info]: GET /api-docs/swagger-ui-standalone-preset.js 304 3ms
+2024-12-15 13:26:47 [info]: Performance: GET /api-docs/swagger-ui-standalone-preset.js - 6ms
+2024-12-15 13:26:47 [info]: GET /api-docs/swagger-ui-bundle.js 304 6ms
+2024-12-15 13:26:47 [info]: Performance: GET /api-docs/swagger-ui-bundle.js - 7ms
+2024-12-15 13:26:47 [info]: GET /api-docs/swagger-ui-init.js 200 3ms
+2024-12-15 13:26:47 [info]: Performance: GET /api-docs/swagger-ui-init.js - 8ms
+2024-12-15 13:26:47 [info]: GET /api-docs/favicon-32x32.png 304 1ms
+2024-12-15 13:26:47 [info]: Performance: GET /api-docs/favicon-32x32.png - 3ms
+2024-12-15 13:29:29 [error]: middlewareError
+2024-12-15 13:32:53 [error]: middlewareError

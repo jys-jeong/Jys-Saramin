@@ -44,6 +44,7 @@ const swaggerOptions = {
           type: 'http',
           scheme: 'bearer',
           bearerFormat: 'JWT',
+          description: '로그인 후, accessToken을 발급 받아 입력하세요'
         },
       },
     },

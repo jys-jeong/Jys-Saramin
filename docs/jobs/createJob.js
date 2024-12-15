@@ -10,7 +10,7 @@
  * /jobs:
  *   post:
  *     summary: 채용 공고 등록
- *     description: 새로운 채용 공고를 등록합니다. 필수 정보는 회사명, 공고 제목, 링크, 경력, 교육 등입니다.(Schema의 설명을 보고 작성해주십시오)
+ *     description: 새로운 채용 공고를 등록합니다. 필수 정보는 회사명, 공고 제목, 링크, 경력, 교육 등입니다.(Schema의 설명을 보고 작성해주십시오)(로그인 후, accessToken을 발급 받아 입력해주세요)
  *     tags:
  *       - JobPostings
  *     security:
@@ -25,7 +25,7 @@
  *               companyName:
  *                 type: string
  *                 description: '채용 공고를 등록할 회사의 이름입니다.'
- *                 example: 'ABC Tech'
+ *                 example: '플러거'
  *               title:
  *                 type: string
  *                 description: '채용 공고의 제목입니다. 예: "백엔드 개발자 모집".'
@@ -33,7 +33,7 @@
  *               link:
  *                 type: string
  *                 description: '채용 공고의 자세한 내용이 있는 링크입니다.'
- *                 example: 'https://www.abc-tech.com/jobs/backend-developer'
+ *                 example: 'https://www.example.com/jobs/backend-developer'
  *               experience:
  *                 type: string
  *                 description: '요구되는 경력 수준입니다. 예: "경력 1년", "경력 2년","경력무관","신입·경력".'
@@ -80,31 +80,47 @@
  *               properties:
  *                 message:
  *                   type: string
+ *                   example: 등록 완료
  *                 jobPosting:
  *                   type: object
  *                   properties:
  *                     id:
  *                       type: integer
+ *                       example: 320
  *                     companyId:
  *                       type: integer
+ *                       example: 4
  *                     title:
  *                       type: string
+ *                       example: 백엔드 개발자 모집
  *                     link:
  *                       type: string
+ *                       example: 'https://www.example.com/jobs/backend-developer'
  *                     experience:
  *                       type: string
+ *                       example: '경력 1년 이상'
  *                     education:
  *                       type: string
+ *                       example: '대졸 이상'
  *                     employmentType:
  *                       type: string
+ *                       example: '정규직'
  *                     salary:
  *                       type: integer
+ *                       example: 3000
  *                     location:
  *                       type: string
+ *                       example: '서울'
  *                     deadline:
  *                       type: string
+ *                       example: '2024-12-31'
+ * 
  *       400:
- *         description: 잘못된 요청
+ *         description: 모든 필드를 입력하셔야합니다. / 회사가 존재하지 않습니다. / keyword는 비어있으면 안되고 배열이어야합니다. / skills는 비어있으면 안되고 배열이어야합니다.
+ *       401:
+ *         description: Authentication required 
+ *       403:
+ *         description: Invalid token 
  *       500:
  *         description: 서버 오류
  */

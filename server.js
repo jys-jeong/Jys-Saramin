@@ -34,7 +34,7 @@ app.use((err, req, res, next) => {
   res.status(err.status || 500).json({ message: err.message });
 });
 sequelize.sync({ force: false }).then(() => {
-  app.listen(17443, () => {
-    console.log(`Server running on http://localhost:17443`);
+  app.listen(8080,() => {
+    console.log(`Server running on http://localhost:10241`);
   });
 });

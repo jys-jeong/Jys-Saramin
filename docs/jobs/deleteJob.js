@@ -3,7 +3,7 @@
  * /jobs/{id}:
  *   delete:
  *     summary: 채용 공고 삭제
- *     description: 특정 채용 공고를 삭제합니다. 관리자나 작성자만 삭제 가능합니다.
+ *     description: 특정 채용 공고를 삭제합니다. 관리자나 작성자만 삭제 가능합니다. (로그인 후, accessToken을 발급 받아 입력해주세요)
  *     tags:
  *       - JobPostings
  *     security:
@@ -28,12 +28,13 @@
  *                   type: string
  *               example:
  *                 message: "채용 공고가 성공적으로 삭제되었습니다."
- *       400:
- *         description: 잘못된 요청
+ * 
  *       401:
- *         description: 인증 실패
+ *         description: Authentication required 
+ *       403:
+ *         description: Invalid token 
  *       404:
- *         description: 공고를 찾을 수 없음
+ *         description: 공고가 존재하지 않습니다.
  *       500:
  *         description: 서버 오류
  */

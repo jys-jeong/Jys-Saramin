@@ -2,7 +2,8 @@
  * @swagger
  * /companyreview/{id}:
  *   delete:
- *     summary: Delete a review by ID
+ *     summary: 기업 리뷰 삭제
+ *     description: 작성한 기업 리뷰를 삭제합니다. (로그인 후, accessToken을 발급 받아 입력해주세요)
  *     tags: [Company Reviews]
  *     security:
  *       - BearerAuth: []
@@ -12,12 +13,17 @@
  *         required: true
  *         schema:
  *           type: integer
- *         description: ID of the review to delete
+ *           example: 1
+ *         description: 삭제할 기업 리뷰 ID를 입력합니다
  *     responses:
  *       200:
- *         description: Review deleted successfully
+ *         description: 리뷰가 삭제되었습니다.
+ *       401:
+ *         description: Authentication required
+ *       403:
+ *         description: Invalid token
  *       404:
- *         description: Review not found
+ *         description: 리뷰를 찾을 수 없습니다.
  *       500:
- *         description: Server error
+ *         description: 서버 오류
  */

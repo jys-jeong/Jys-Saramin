@@ -2,7 +2,8 @@
  * @swagger
  * /companyreview:
  *   get:
- *     summary: Retrieve company reviews
+ *     summary: 회사별 리뷰 조회
+ *     description: 작성한 기업 리뷰를 조회합니다. (로그인 후, accessToken을 발급 받아 입력해주세요)
  *     tags: [Company Reviews]
  *     security:
  *       - BearerAuth: []
@@ -11,22 +12,23 @@
  *         name: companyId
  *         schema:
  *           type: integer
- *         description: Filter reviews by company ID
+ *           example: 1
+ *         description: 조회할 회사의 ID를 입력하세요
  *       - in: query
  *         name: page
  *         schema:
  *           type: integer
  *           default: 1
- *           description: Page number for pagination
+ *           description: 페이지 수를 입력하세요
  *       - in: query
  *         name: limit
  *         schema:
  *           type: integer
  *           default: 10
- *           description: Number of reviews per page
+ *           description: 페이지당 리뷰 수
  *     responses:
  *       200:
- *         description: List of company reviews
+ *         description: 회사 리뷰 목록
  *         content:
  *           application/json:
  *             schema:
@@ -34,7 +36,7 @@
  *               properties:
  *                 totalCount:
  *                   type: integer
- *                   description: Total number of reviews
+ *                   description: 총 리뷰 수
  *                 reviews:
  *                   type: array
  *                   items:
@@ -42,29 +44,36 @@
  *                     properties:
  *                       id:
  *                         type: integer
- *                         description: ID of the review
+ *                         description: 리뷰 ID
+ *                         example: 1
  *                       companyId:
  *                         type: integer
- *                         description: ID of the company being reviewed
+ *                         description: 작성한 리뷰의 회사의 ID
+ *                         example: 1
  *                       review:
  *                         type: string
- *                         description: Content of the review
+ *                         description: 리뷰 내용
+ *                         example: "이 회사는 정말 저에게 큰 도움이 되었습니다."
  *                       createdAt:
  *                         type: string
  *                         format: date-time
- *                         description: When the review was created
+ *                         description: 리뷰 작성일
  *                       updatedAt:
  *                         type: string
  *                         format: date-time
- *                         description: When the review was last updated
+ *                         description: 리뷰 업데이트일
  *                 totalPages:
  *                   type: integer
- *                   description: Total number of pages
+ *                   description: 총 페이지 수
  *                 currentPage:
  *                   type: integer
- *                   description: Current page number
+ *                   description: 현재 페이지 수
+ *       401:
+ *         description: Authentication required
+ *       403:
+ *         description: Invalid token
  *       404:
- *         description: No reviews found
+ *         description: 리뷰를 찾을 수 없습니다.
  *       500:
- *         description: Server error
+ *         description: 서버 오류
  */

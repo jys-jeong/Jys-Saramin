@@ -2,9 +2,10 @@ const jwt = require('jsonwebtoken');
 const User = require('../models').User;
 const LoginHistory =require('../models').LoginHistory;
 const RefreshToken = require('../models').RefreshToken;
+const Bookmark = require('../models').Bookmark;
 const { createError } = require('../middlewares/errorHandler');
 const { JWT_SECRET, JWT_REFRESH_SECRET } = require('../config/jwt.js');
-
+const { successResponse, errorResponse } = require('../utils/responseHandler');
 exports.register = async (req, res, next) => {
   try {
     const { email, password, name, role } = req.body;
@@ -12,10 +13,10 @@ exports.register = async (req, res, next) => {
 
     // 사용자 정보 저장
     const newUser = await User.create({ email, password: hashedPassword, name, role });
-    res.status(201).json({ message: '회원가입 완료', user: newUser });
+    return successResponse(res, { user: newUser }, null, '회원가입 완료');
   } catch (error) {
     console.error(error);  // 에러 로그를 콘솔에 출력
-    next(createError(500, '서버 에러 발생'));
+    return errorResponse(res, '서버 에러 발생', 'SERVER_ERROR', 500);
   }
 };
 
@@ -26,13 +27,13 @@ exports.login = async (req, res, next) => {
     console.log(user);
     console.log(email,password);
     if (!user) {
-      return next(createError(401, '인증 실패, 권한 없음: 회원가입 해주세요'));
+      return errorResponse(res, '존재하지 않는 사용자입니다.', 'USER_NOT_FOUND', 401);
     }
 
     // 2. 비밀번호 검증
     const encryptedPassword = Buffer.from(password).toString('base64');
     if (user.password !== encryptedPassword) {
-      return next(createError(401, '인증 실패, 권한 없음: 입력하신 비밀번호가 틀렸습니다.'));
+      return errorResponse(res, '입력하신 비밀번호가 틀렸습니다.', 'INVALID_PASSWORD', 401);
     }
 
     // Access Token 발급
@@ -61,13 +62,10 @@ exports.login = async (req, res, next) => {
       expiresAt: (new Date()) + 7
     });
 
-    res.status(200).json({
-      accessToken, 
-      refreshToken,  // Refresh Token을 클라이언트에게 전달
-    });
+    return successResponse(res, { accessToken, refreshToken }, null, '로그인 성공');
   } catch (error) {
     console.error('Error during login:', error);
-    next(createError(500, '서버 오류 발생'));
+    return errorResponse(res, '서버 오류 발생', 'SERVER_ERROR', 500);
   }
 };
 
@@ -76,20 +74,20 @@ exports.refreshToken = async (req, res, next) => {
     const { refreshToken } = req.body;
 
     if (!refreshToken) {
-      return next(createError(400, '잘못된 입력, 파라미터 오류'));
+      return errorResponse(res, '잘못된 입력, 파라미터 오류', 'INVALID_INPUT', 400);
     }
 
     // 데이터베이스에서 Refresh 토큰 확인
     const storedToken = await RefreshToken.findOne({ where: { token: refreshToken } });
     if (!storedToken) {
-      return next(createError(403, '특정 자원에 대한 접근 권한 없음'));
+      return errorResponse(res, '특정 자원에 대한 접근 권한 없음', 'FORBIDDEN', 403);
     }
 
     // Refresh 토큰 검증
     jwt.verify(refreshToken, process.env.JWT_REFRESH_SECRET || 'default_secret', async (err, decoded) => {
       if (err) {
         await RefreshToken.destroy({ where: { token: refreshToken } });
-        return next(createError(403, '특정 자원에 대한 접근 권한 없음, 로그인 해주세요'));
+        return errorResponse(res, '특정 자원에 대한 접근 권한 없음, 로그인 해주세요', 'FORBIDDEN', 403);
       }
 
       // 새로운 Access 토큰 발급
@@ -99,11 +97,11 @@ exports.refreshToken = async (req, res, next) => {
         { expiresIn: '1h' }
       );
 
-      res.status(200).json({ accessToken: newAccessToken });
+      return successResponse(res, { accessToken: newAccessToken }, null, 'Access Token 재발급 성공');
     });
   } catch (error) {
     console.error('Error during token refresh:', error);
-    next(createError(500, '서버 오류 발생'));
+    return errorResponse(res, '서버 오류 발생', 'SERVER_ERROR', 500);
   }
 };
 
@@ -121,17 +119,17 @@ exports.updateProfile = async (req, res,next) => {
     );
     
     if (updatedUser[0] === 0) {
-      return res.status(400).json({ message: '잘못된 입력, 파라미터 오류' });
+      return errorResponse(res, '잘못된 입력, 파라미터 오류', 'INVALID_INPUT', 400);
     }
     const newAccessToken = jwt.sign(
       { id: req.user.id, email: req.user.email, role: req.user.role },
       process.env.JWT_SECRET || 'default_secret',
       { expiresIn: '1h' }
     );
-    res.status(200).json({ message: '프로필 업데이트 성공', accessToken:newAccessToken });
+    return successResponse(res, { message: '프로필 업데이트 성공', accessToken: newAccessToken });
   } catch (error) {
     console.error(error);
-      next(createError(500, '서버 오류 발생:',error));
+    return errorResponse(res, '서버 오류 발생', 'SERVER_ERROR', 500);
   }
 };
 exports.getProfile = async (req, res,next) => {
@@ -142,14 +140,14 @@ exports.getProfile = async (req, res,next) => {
     const user = await User.findOne({ where: { id: userId } });
     
     if (!user) {
-      next(createError(404, '요청한 자원 없음'));
+      return errorResponse(res, '사용자가 존재하지 않습니다.', 'NOT_FOUND', 404);
     }
 
     // 비밀번호 제외한 사용자 정보 반환
     const { password, ...userData } = user.toJSON();
-    res.status(200).json({ user: userData });
+    return successResponse(res, userData, null, '프로필 조회 성공');
   } catch (error) {
-    next(createError(500, '서버 오류 발생'));
+    return errorResponse(res, '서버 오류 발생', 'SERVER_ERROR', 500);
   }
 };
 // 회원 탈퇴 API
@@ -161,18 +159,18 @@ exports.deleteAccount = async (req, res, next) => {
     // 사용자가 존재하는지 확인
     const user = await User.findOne({ where: { id: targetUserId } });
     if (!user) {
-      return next(createError(404, '요청한 자원 없음'));
+      return errorResponse(res, '사용자가 존재하지 않습니다.', 'NOT_FOUND', 404);
     }
 
     // 관련 데이터 삭제 (예: 로그인 기록)
     await LoginHistory.destroy({ where: { userId: targetUserId } });
-
+    await Bookmark.destroy({ where: { userId: targetUserId } });
     // 사용자 삭제
     await User.destroy({ where: { id: targetUserId } });
-
-    res.status(200).json({ message: '유저 삭제 완료' });
+    
+    return successResponse(res, null, null, '유저 삭제 완료');
   } catch (error) {
     console.error(error);
-    next(createError(500, '서버 오류 발생'));
+    return errorResponse(res, '서버 오류 발생', 'SERVER_ERROR', 500);
   }
 };

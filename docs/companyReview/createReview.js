@@ -8,7 +8,8 @@
  * @swagger
  * /companyreview:
  *   post:
- *     summary: Create a new company review
+ *     summary: 회사 리뷰 생성 
+ *     description: 기업 리뷰를 생성합니다. (로그인 후, accessToken을 발급 받아 입력해주세요)
  *     tags: [Company Reviews]
  *     security:
  *       - BearerAuth: []
@@ -24,13 +25,15 @@
  *             properties:
  *               companyId:
  *                 type: integer
- *                 description: ID of the company being reviewed
+ *                 description: 리뷰를 작성할 회사의 ID
+ *                 example: 1
  *               review:
  *                 type: string
  *                 description: Content of the review
+ *                 example: "이 회사는 정말 저에게 큰 도움이 되었습니다."
  *     responses:
  *       201:
- *         description: Review successfully created
+ *         description: 기업리뷰를 성공적으로 작성하였습니다.
  *         content:
  *           application/json:
  *             schema:
@@ -38,25 +41,31 @@
  *               properties:
  *                 id:
  *                   type: integer
- *                   description: ID of the created review
+ *                   description: 리뷰 ID
+ *                   example: 1
  *                 companyId:
  *                   type: integer
- *                   description: ID of the company being reviewed
+ *                   description: 리뷰를 작성한 회사의 ID
+ *                   example: 1
  *                 review:
  *                   type: string
- *                   description: Content of the review
+ *                   description: 리뷰 내용용
+ *                   example: "이 회사는 정말 저에게 큰 도움이 되었습니다."
  *                 createdAt:
  *                   type: string
  *                   format: date-time
- *                   description: When the review was created
+ *                   description: 리뷰 작성일
  *                 updatedAt:
  *                   type: string
  *                   format: date-time
- *                   description: When the review was last updated
- *       400:
- *         description: Invalid input
+ *                   description: 리뷰 업데이트일
+ *
+ *       401:
+ *         description: Authentication required
+ *       403:
+ *         description: Invalid token
  *       404:
- *         description: Company not found
+ *         description: 해당 기업을 찾을 수 없습니다.
  *       500:
- *         description: Server error
+ *         description: 서버 오류
  */

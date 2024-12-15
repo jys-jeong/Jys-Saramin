@@ -3,7 +3,7 @@
  * /jobs/{id}:
  *   put:
  *     summary: 채용 공고 수정
- *     description: 기존의 채용 공고를 수정합니다. 수정하려면 "admin"권한 작성자 권한이 필요합니다.(Schema의 설명을 보고 작성해주십시오)
+ *     description: 기존의 채용 공고를 수정합니다. 수정하려면 "admin"권한 작성자 권한이 필요합니다.(Schema의 설명을 보고 작성해주십시오) (로그인 후, accessToken을 발급 받아 입력해주세요)
  *     tags:
  *       - JobPostings
  *     security:
@@ -80,6 +80,7 @@
  *               properties:
  *                 message:
  *                   type: string
+ *                   example: 업데이트에 성공하였습니다.
  *                 jobPosting:
  *                   type: object
  *                   properties:
@@ -103,10 +104,15 @@
  *                       type: string
  *                     deadline:
  *                       type: string
+ * 
  *       400:
- *         description: 잘못된 요청
+ *         description: 회사가 존재하지 않습니다.
  *       401:
- *         description: 인증 실패
+ *         description: Authentication required 
+ *       403:
+ *         description: Invalid token / 업데이트 권한이 없습니다.
+ *       404:
+ *         description: 공고가 존재하지 않습니다.
  *       500:
  *         description: 서버 오류
  */

@@ -19,7 +19,8 @@ const errorHandler = (err, req, res, next) => {
 
   // 400, 404, 500 등 기타 에러 처리
   return res.status(500).json({
-    success: false,
+    status:'error',
+    statusCode: 500,
     message: '서버 오류 발생. 나중에 다시 시도해주세요.',
   });
 };

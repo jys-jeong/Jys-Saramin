@@ -3,7 +3,7 @@
 * /jobs/{id}:
  *   get:
  *     summary: 채용 공고 상세 조회
- *     description: 특정 채용 공고의 상세 정보를 조회합니다.
+ *     description: 특정 채용 공고의 상세 정보를 조회합니다. 
  *     tags:
  *       - JobPostings
  *     parameters:

@@ -31,8 +31,12 @@
  *               properties:
  *                 accessToken:
  *                   type: string
+ *                   example: "accessToken 발급"
  *                 refreshToken:
  *                   type: string
+ *                   example: "refreshTokenToken 발급"
  *       401:
- *         description: 인증 실패
+ *         description: 입력하신 비밀번호가 틀렸습니다. / 존재하지 않는 user입니다.
+ *       500:
+ *         description: 서버 오류 발생
  */

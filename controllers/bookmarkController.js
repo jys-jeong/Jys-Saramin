@@ -1,5 +1,6 @@
 const { Bookmark, JobPosting } = require('../models');
 const { createError } = require('../middlewares/errorHandler');
+const { successResponse, errorResponse } = require('../utils/responseHandler');
 exports.toggleBookmark = async (req, res, next) => {
   try {
     const { jobPostingId } = req.body;  // 요청 본문에서 jobPostingId 추출
@@ -13,7 +14,7 @@ exports.toggleBookmark = async (req, res, next) => {
     if (existingBookmark) {
       // 이미 북마크가 존재하면 삭제
       await existingBookmark.destroy();
-      return res.status(200).json({ message: '북마크가 제거되었습니다.' });
+      return successResponse(res, null, null, '북마크가 제거되었습니다.');
     }
 
     // 북마크가 없다면 새로 추가
@@ -22,10 +23,10 @@ exports.toggleBookmark = async (req, res, next) => {
       jobPostingId,
     });
 
-    return res.status(201).json(newBookmark);
+    return successResponse(res, newBookmark, null, '북마크가 추가되었습니다.');
   } catch (error) {
     console.error(error);
-    return next(createError(500, '서버 오류'));
+    return errorResponse(res, '서버 오류 발생', 'SERVER_ERROR', 500);
   }
 };
 
@@ -49,17 +50,15 @@ exports.getBookmarks = async (req, res, next) => {
     });
 
     if (!bookmarks) {
-      return next(createError(404, '북마크가 존재하지 않습니다.'));
+      return errorResponse(res, '북마크가 존재하지 않습니다.', 'NOT_FOUND', 404);
     }
-
-    return res.status(200).json({
+    return successResponse(res, bookmarks.rows,{
       totalCount: bookmarks.count,
       totalPages: Math.ceil(bookmarks.count / limit),  // 총 페이지 수
       currentPage: page,  // 현재 페이지
-      bookmarks: bookmarks.rows,
     });
   } catch (error) {
     console.error(error);
-    return next(createError(500, '서버 오류'));
+    return errorResponse(res, '서버 오류 발생', 'SERVER_ERROR', 500);
   }
 };

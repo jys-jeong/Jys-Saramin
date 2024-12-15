@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const { authenticate } = require('../middlewares/authMiddleware');
+const authorize = require('../middlewares/permissionMiddleware');
 const jobController = require('../controllers/jobController');
 
 // 채용 공고 목록 조회 (GET /jobs)
@@ -16,6 +17,6 @@ router.post('/', authenticate,jobController.createJobPosting);
 router.put('/:id', authenticate, jobController.updateJobPosting);
 
 // 채용 공고 삭제 (DELETE /jobs/:id)
-router.delete('/:id', authenticate, jobController.deleteJobPosting);
+router.delete('/:id', authenticate,authorize(['admin']),jobController.deleteJobPosting);
 
 module.exports = router;

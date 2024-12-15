@@ -1,6 +1,7 @@
 const { Application, JobPosting } = require('../models');
 const jwt = require('jsonwebtoken');  // JWT 인증
 const { createError } = require('../middlewares/errorHandler');
+const { successResponse, errorResponse } = require('../utils/responseHandler');
 // 지원하기
 exports.createApplication = async (req, res, next) => {
   try {
@@ -13,7 +14,7 @@ exports.createApplication = async (req, res, next) => {
     });
 
     if (existingApplication) {
-      return next(createError(400, '이미 해당 공고에 지원한 상태입니다.'));
+      return errorResponse(res, '이미 해당 공고에 지원한 상태입니다.', 'DUPLICATE_APPLICATION', 400);
     }
 
     // 지원 정보 저장
@@ -24,10 +25,10 @@ exports.createApplication = async (req, res, next) => {
       date: new Date(),
     });
 
-    return res.status(201).json(newApplication);
+    return successResponse(res, newApplication, null, '지원이 완료되었습니다.');
   } catch (error) {
     console.error(error);
-    return next(createError(500, '서버 오류'));
+    return errorResponse(res, '서버 오류', 'SERVER_ERROR', 500);
   }
 };
 
@@ -50,10 +51,10 @@ exports.getApplications = async (req, res, next) => {
       order: [['date', 'DESC']],  // 날짜별 정렬
     });
 
-    return res.status(200).json(applications);
+    return successResponse(res, applications);
   } catch (error) {
     console.error(error);
-    return next(createError(500, '서버 오류'));
+    return errorResponse(res, '서버 오류', 'SERVER_ERROR', 500);
   }
 };
 
@@ -69,21 +70,21 @@ exports.cancelApplication = async (req, res, next) => {
     });
 
     if (!application) {
-      return next(createError(404, '지원 내역을 찾을 수 없습니다.'));
+      return errorResponse(res, '지원 내역을 찾을 수 없습니다.', 'NOT_FOUND', 404);
     }
 
     // 취소 가능 여부 확인 (applied 상태에서만 취소 가능)
     if (application.status !== 'applied') {
-      return next(createError(400, '취소할 수 없는 상태입니다.'));
+      return errorResponse(res, '취소할 수 없는 상태입니다.', 'INVALID_STATUS', 400);
     }
 
     // 상태 업데이트 (canceled로 변경)
     application.status = 'canceled';
     await application.save();
 
-    return res.status(200).json({ message: '지원이 취소되었습니다.' });
+    return successResponse(res, { message: '지원이 취소되었습니다.' });
   } catch (error) {
     console.error(error);
-    return next(createError(500, '서버 오류'));
+    return errorResponse(res, '서버 오류', 'SERVER_ERROR', 500);
   }
 };

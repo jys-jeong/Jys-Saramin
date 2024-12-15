@@ -143,8 +143,9 @@
  *                         type: string
  *                       wage:
  *                         type: string
+ * 
  *       400:
- *         description: 잘못된 요청
+ *         description: 해당하는 데이터가 존재하지 않습니다. 
  *       500:
  *         description: 서버 오류
  */
